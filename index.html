@@ -12,16 +12,16 @@
   <meta property="og:title" content="דב הלר · המערכת הבאה שלך מתחילה כאן" />
   <meta property="og:description" content="יש תהליך שמסורבל מדי בשביל עוד גיליון? ב־HDIGITAL בונים לו מערכת: תוכנה, CRM וסוכני AI שעושים עבודה אמיתית." />
   <meta property="og:url" content="https://dovheller.com/" />
-  <meta property="og:image" content="https://dovheller.com/assets/hdigital-home-share.png" />
+  <meta property="og:image" content="https://dovheller.com/assets/hdigital-share-brand.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="כרטיס HDIGITAL של דב הלר בצבעי נייבי וציאן, עם קו אות העובר דרך מסגרות המדמות מערכת." />
+  <meta property="og:image:alt" content="כרטיס HDIGITAL של דב הלר עם לוגו הלר דיגיטל וקו אות בצבעי נייבי וציאן." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="דב הלר · המערכת הבאה שלך מתחילה כאן" />
   <meta name="twitter:description" content="יש תהליך שמסורבל מדי בשביל עוד גיליון? ב־HDIGITAL בונים לו מערכת: תוכנה, CRM וסוכני AI שעושים עבודה אמיתית." />
-  <meta name="twitter:image" content="https://dovheller.com/assets/hdigital-home-share.png" />
-  <meta name="twitter:image:alt" content="כרטיס HDIGITAL של דב הלר בצבעי נייבי וציאן, עם קו אות העובר דרך מסגרות המדמות מערכת." />
+  <meta name="twitter:image" content="https://dovheller.com/assets/hdigital-share-brand.png" />
+  <meta name="twitter:image:alt" content="כרטיס HDIGITAL של דב הלר עם לוגו הלר דיגיטל וקו אות בצבעי נייבי וציאן." />
   <link rel="preload" href="/assets/fonts/almoni-neue-aaa-regular.otf" as="font" type="font/otf" crossorigin />
   <link rel="preload" href="/assets/fonts/almoni-neue-aaa-bold.otf" as="font" type="font/otf" crossorigin />
   <script type="application/ld+json">
@@ -45,7 +45,7 @@
           "name": "HDIGITAL",
           "alternateName": "הלר דיגיטל",
           "url": "https://dovheller.com/",
-          "logo": "https://dovheller.com/assets/logo.png",
+          "logo": "https://dovheller.com/assets/hdigital-logo-opaque.png",
           "email": "contact@dovheller.com",
           "founder": {
             "@id": "https://dovheller.com/#dov-heller"
@@ -67,6 +67,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <script>
+    if (location.hostname === 'dovheller-com.onrender.com') {
+      const path = location.pathname + location.search + location.hash;
+      try {
+        const key = 'hd-domain-redirect';
+        const previous = JSON.parse(sessionStorage.getItem(key) || 'null');
+        const now = Date.now();
+        if (previous?.path !== path || now - previous.time > 15000) {
+          sessionStorage.setItem(key, JSON.stringify({ path, time: now }));
+          location.replace('https://dovheller.com' + path);
+        }
+      } catch {
+        // Leave the page available if browser storage is restricted.
+      }
+    }
+  </script>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script>
     tailwind.config = {
@@ -101,6 +117,7 @@
       --border: #E2E8F0;
       --signal: #27B1FC;
     }
+    [hidden] { display: none !important; }
     body.cyber-mode {
       --bg: #080C14;
       --surface: #0F1624;
@@ -177,7 +194,7 @@
     <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <button id="brand-home-btn" type="button" class="flex items-center gap-3 text-start focus:outline-none focus-visible:ring-2 focus-visible:ring-signal rounded" aria-label="דב הלר — דף הבית">
-          <img src="assets/logo.png" alt="HDIGITAL" class="h-8 w-auto object-contain rounded-sm" />
+          <img src="assets/hdigital-logo-opaque.png" alt="HDIGITAL" class="h-8 w-auto object-contain rounded-sm" />
           <span class="hidden sm:inline-block h-4 w-px bg-slate-300 dark:bg-slate-700"></span>
           <span id="brand-sub" class="hidden sm:inline-block text-xs mono tracking-wider uppercase" style="color: var(--muted);">DOV HELLER</span>
         </button>
@@ -266,6 +283,89 @@
   </div>
 
   <script>
+    const PUBLIC_SITE = 'https://dovheller.com/';
+    const ROUTES = ['home', 'about', 'capabilities', 'cyber', 'proofs', 'approach', 'contact'];
+    const CYBER_TOOLS = {
+      "he": {
+        "title": "כלים לעבודה",
+        "intro": "בדיקת קובץ, הכנה לתרגיל שחזור ותיעוד שרשרת משמורת.",
+        "hashTitle": "טביעת קובץ SHA‑256",
+        "hashText": "בחרו קובץ עד 20MB וקבלו טביעה להשוואה. החישוב מתבצע בדפדפן והקובץ נשאר אצלכם.",
+        "file": "בחרו קובץ",
+        "working": "מחשב טביעת קובץ…",
+        "tooBig": "הקובץ גדול מהמגבלה של 20MB.",
+        "hashError": "לא ניתן לחשב טביעה בדפדפן הזה.",
+        "hashReady": "טביעת הקובץ מוכנה.",
+        "planTitle": "הכנה לתרגיל שחזור",
+        "planText": "סמנו את מה שכבר נקבע לצורך התרגיל.",
+        "checks": [
+          "נבחר עותק גיבוי לבדיקה",
+          "הוגדרו אחראי וסביבת שחזור",
+          "הוגדר איך מוודאים שהמידע שוחזר"
+        ],
+        "count": "סומנו {n} מתוך 3",
+        "flowTitle": "תיעוד שרשרת משמורת",
+        "steps": [
+          [
+            "קליטה",
+            "מתעדים את מזהה הפריט, מקורו, מועד הקליטה והאחראי."
+          ],
+          [
+            "אימות",
+            "מתעדים חישוב SHA‑256 במועדים שנקבעו ומשווים לערך הייחוס."
+          ],
+          [
+            "מסירה",
+            "מתעדים למי הועבר הפריט, מתי, ומה כלל החומר שנמסר."
+          ]
+        ],
+        "share": "שיתוף בוואטסאפ",
+        "copy": "העתקת קישור",
+        "copied": "הקישור הועתק",
+        "copyHint": "הקישור מסומן להעתקה ידנית",
+        "shareUrl": "כתובת לשיתוף"
+      },
+      "en": {
+        "title": "Practical tools",
+        "intro": "Check a file, prepare a recovery exercise, and document chain of custody.",
+        "hashTitle": "SHA‑256 file fingerprint",
+        "hashText": "Choose a file up to 20 MB to calculate a fingerprint for comparison. The browser processes it locally.",
+        "file": "Choose a file",
+        "working": "Calculating fingerprint…",
+        "tooBig": "The file exceeds the 20 MB limit.",
+        "hashError": "This browser could not calculate the fingerprint.",
+        "hashReady": "File fingerprint ready.",
+        "planTitle": "Recovery exercise checklist",
+        "planText": "Mark each item you have set up for the exercise.",
+        "checks": [
+          "Select a backup to test",
+          "Assign an owner and pick a recovery environment",
+          "Define how to verify the recovered data"
+        ],
+        "count": "{n} of 3 checked",
+        "flowTitle": "Chain-of-custody documentation",
+        "steps": [
+          [
+            "Intake",
+            "Record the item ID, source, intake time, and person responsible."
+          ],
+          [
+            "Verification",
+            "Record SHA‑256 at each designated point and compare it with the reference value."
+          ],
+          [
+            "Handover",
+            "Record who received the item, when, and what the handover included."
+          ]
+        ],
+        "share": "Share on WhatsApp",
+        "copy": "Copy link",
+        "copied": "Link copied",
+        "copyHint": "Link selected for manual copying",
+        "shareUrl": "Share link"
+      }
+    };
+
     const STATE = {
       lang: 'he',
       route: 'home',
@@ -900,6 +1000,119 @@
       `;
     }
 
+    function pageUrl(route, language) {
+      const url = new URL(PUBLIC_SITE);
+      if (route !== 'home') url.searchParams.set('view', route);
+      if (language === 'en') url.searchParams.set('lang', 'en');
+      return url;
+    }
+
+    function restorePageFromUrl() {
+      const params = new URLSearchParams(location.search);
+      const route = params.get('view');
+      STATE.route = ROUTES.includes(route) ? route : 'home';
+      STATE.lang = params.get('lang') === 'en' ? 'en' : 'he';
+    }
+
+    function recordPageUrl() {
+      const url = pageUrl(STATE.route, STATE.lang);
+      const path = url.pathname + url.search;
+      if (path !== location.pathname + location.search) history.pushState(null, '', path);
+    }
+
+    function renderCyberTools() {
+      const w = CYBER_TOOLS[STATE.lang];
+      const url = pageUrl('cyber', STATE.lang).href;
+      return `
+        <section aria-labelledby="cyber-tools-heading" class="space-y-5 pt-2">
+          <div class="space-y-1">
+            <h2 id="cyber-tools-heading" class="text-2xl font-bold text-white">${w.title}</h2>
+            <p class="text-slate-300">${w.intro}</p>
+          </div>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="surface-card min-w-0 rounded-xl p-5 space-y-3">
+              <h3 class="text-lg font-bold text-white">${w.hashTitle}</h3>
+              <p id="cyber-hash-help" class="text-sm text-slate-300">${w.hashText}</p>
+              <label for="cyber-hash-file" class="block text-sm font-medium text-sky-300">${w.file}</label>
+              <input id="cyber-hash-file" aria-describedby="cyber-hash-help" type="file" class="block w-full rounded-md border border-slate-600 bg-slate-950 p-2 text-sm text-slate-200">
+              <p id="cyber-hash-status" class="text-sm text-slate-300" role="status"></p>
+              <output hidden id="cyber-hash-output" for="cyber-hash-file" dir="ltr" class="mono block break-all rounded-md bg-slate-950 p-3 text-sm text-sky-300"></output>
+            </div>
+            <fieldset class="surface-card min-w-0 rounded-xl p-5 space-y-3" aria-labelledby="cyber-plan-heading">
+              <h3 id="cyber-plan-heading" class="text-lg font-bold text-white">${w.planTitle}</h3>
+              <p class="text-sm text-slate-300">${w.planText}</p>
+              <div class="space-y-2">
+                ${w.checks.map(text => `<label class="flex items-start gap-2 text-sm text-slate-200"><input data-cyber-check type="checkbox" class="mt-1 accent-sky-400"><span>${text}</span></label>`).join('')}
+              </div>
+              <p id="cyber-plan-count" class="text-sm text-sky-300" role="status">${w.count.replace('{n}', '0')}</p>
+            </fieldset>
+            <div class="surface-card rounded-xl p-5 space-y-3 md:col-span-2">
+              <h3 class="text-lg font-bold text-white">${w.flowTitle}</h3>
+              <div class="grid gap-3 md:grid-cols-3">
+                ${w.steps.map(([title, text]) => `<details class="rounded-lg border border-slate-700 p-3"><summary class="cursor-pointer font-medium text-sky-300">${title}</summary><p class="mt-2 text-sm text-slate-200">${text}</p></details>`).join('')}
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://wa.me/?text=${encodeURIComponent(url)}" target="_blank" rel="noopener noreferrer" class="rounded-md bg-sky-300 px-4 py-2 text-sm font-bold text-slate-950">${w.share}</a>
+            <button id="cyber-copy-link" type="button" class="rounded-md border border-slate-500 px-4 py-2 text-sm font-medium text-white">${w.copy}</button>
+            <span id="cyber-copy-status" role="status" class="text-sm text-sky-300"></span>
+          </div>
+          <input hidden id="cyber-share-url" aria-label="${w.shareUrl}" readonly dir="ltr" value="${url.replaceAll('&', '&amp;')}" class="min-w-0 w-full rounded-md border border-slate-600 bg-slate-950 p-2 text-sm text-slate-200">
+        </section>
+      `;
+    }
+
+    function bindCyberTools() {
+      const w = CYBER_TOOLS[STATE.lang];
+      const fileField = document.getElementById('cyber-hash-file');
+      const output = document.getElementById('cyber-hash-output');
+      const status = document.getElementById('cyber-hash-status');
+      let selection = 0;
+      fileField.addEventListener('change', async () => {
+        const current = ++selection;
+        const file = fileField.files[0];
+        output.hidden = true;
+        output.textContent = '';
+        status.textContent = '';
+        if (!file) return;
+        if (file.size > 20_000_000) {
+          status.textContent = w.tooBig;
+          return;
+        }
+        status.textContent = w.working;
+        try {
+          const digest = await crypto.subtle.digest('SHA-256', await file.arrayBuffer());
+          if (current !== selection || !fileField.isConnected) return;
+          output.textContent = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, '0')).join('');
+          output.hidden = false;
+          status.textContent = w.hashReady;
+        } catch {
+          if (current === selection) status.textContent = w.hashError;
+        }
+      });
+
+      const checks = Array.from(document.querySelectorAll('[data-cyber-check]'));
+      const count = document.getElementById('cyber-plan-count');
+      checks.forEach(check => check.addEventListener('change', () => {
+        count.textContent = w.count.replace('{n}', checks.filter(item => item.checked).length);
+      }));
+
+      const shareUrl = document.getElementById('cyber-share-url');
+      const copyStatus = document.getElementById('cyber-copy-status');
+      document.getElementById('cyber-copy-link').addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(shareUrl.value);
+          copyStatus.textContent = w.copied;
+        } catch {
+          shareUrl.hidden = false;
+          shareUrl.focus();
+          shareUrl.select();
+          copyStatus.textContent = w.copyHint;
+        }
+      });
+    }
+
     function renderCyber() {
       const cd = CYBER_DATA[STATE.lang];
       return `
@@ -926,6 +1139,8 @@
               </div>
             `).join('')}
           </div>
+
+          ${renderCyberTools()}
 
           <div class="surface-card rounded-xl p-6 space-y-2 max-w-3xl">
             <h3 class="mono text-xs uppercase tracking-widest text-slate-400">${cd.partnersTitle}</h3>
@@ -1095,6 +1310,8 @@
     }
 
     function bindViewEvents(d) {
+      if (STATE.route === 'cyber') bindCyberTools();
+
       // Pillars on home
       document.querySelectorAll('[data-pillar]').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1171,6 +1388,7 @@
 
     function navigate(route) {
       STATE.route = route;
+      recordPageUrl();
       document.getElementById('mobile-nav').classList.add('hidden');
       document.getElementById('mobile-menu-btn').setAttribute('aria-expanded', 'false');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1192,6 +1410,7 @@
         if (r === 'cyber') {
           const span = btn.querySelectorAll('span')[1];
           if (span) span.textContent = d.nav.cyber;
+          else btn.textContent = d.nav.cyber;
         } else {
           btn.textContent = d.nav[r];
         }
@@ -1219,6 +1438,11 @@
       bindViewEvents(d);
     }
 
+    window.addEventListener('popstate', () => {
+      restorePageFromUrl();
+      render();
+    });
+
     // Global nav & chrome listeners
     document.getElementById('brand-home-btn').addEventListener('click', () => navigate('home'));
     document.querySelectorAll('[data-route]').forEach(btn => {
@@ -1226,6 +1450,7 @@
     });
     document.getElementById('lang-toggle').addEventListener('click', () => {
       STATE.lang = STATE.lang === 'he' ? 'en' : 'he';
+      recordPageUrl();
       render();
     });
     document.getElementById('mobile-menu-btn').addEventListener('click', () => {
@@ -1278,6 +1503,7 @@
       });
     });
 
+    restorePageFromUrl();
     render();
   </script>
 </body>
