@@ -3,7 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>דב הלר · הלר דיגיטל | Dov Heller</title>
+  <title>דב הלר · HDIGITAL | Dov Heller</title>
+  <meta name="description" content="דב הלר, מייסד HDIGITAL. אפיון ובנייה של מוצרי תוכנה, מערכות CRM, סוכני AI ותשתיות לעבודה עם מידע רגיש." />
+  <link rel="canonical" href="https://dovheller.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="דב הלר · HDIGITAL" />
+  <meta property="og:description" content="מוצרי תוכנה, מערכות CRM, סוכני AI ותשתיות לעבודה עם מידע רגיש." />
+  <meta property="og:url" content="https://dovheller.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -175,7 +181,6 @@
   </footer>
 
   <!-- Toast notification -->
-  <div id="toast" class="fixed bottom-5 inset-x-5 sm:inset-x-auto sm:end-5 z-50 hidden max-w-sm px-4 py-3 rounded-lg shadow-lg text-sm font-medium bg-navy text-white border border-slate-700"></div>
 
   <!-- Legal Modal -->
   <div id="legal-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-xs" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
@@ -206,7 +211,6 @@
       capTab: 'software',
       proofFilter: 'all',
       activePillar: 'software',
-      cyberLang: 'en', // Cyber page defaults to English ("שפה אחרת") with instant toggle
       expandedProof: null
     };
 
@@ -231,8 +235,8 @@
         },
         home: {
           eyebrow: 'DOV HELLER · PRODUCT & INFRASTRUCTURE ARCHITECT',
-          headline: 'מי שמכיר — מכיר.',
-          subhead: 'דב הלר מתכנן ומקים מערכות תוכנה, סוכני AI ותשתיות סגורות — תמיד צעד אחד לפני שהשוק מנסח את הקטגוריה.',
+          headline: 'מי שמכיר, מכיר.',
+          subhead: 'אני דב הלר, מייסד HDIGITAL. אני מתכנן ובונה מוצרי תוכנה לשווקים בארץ ובחו״ל, מערכות CRM, סוכני AI ותשתיות לעבודה עם מידע רגיש.',
           ctaPrimary: 'הוכחות יכולת',
           ctaSecondary: 'קשר ישיר',
           pillarsTitle: 'חדר המכונות',
@@ -241,33 +245,26 @@
               id: 'software',
               num: '01',
               name: 'תוכנה ו-AI',
-              short: 'מוצר, פלטפורמות CRM רב-ארגוניות, מפות ללא GPS וסוכני AI שפועלים בפועל.',
+              short: 'אפיון ובנייה של מוצרי תוכנה, מערכות CRM וסוכנים שמבצעים פעולות באישור המשתמש.',
               route: 'capabilities'
             },
             {
               id: 'cyber',
               num: '02',
               name: 'סייבר ומערכות סגורות',
-              short: 'אמון, פרטיות, סביבות מנותקות רשת (ללא Wi-Fi) ושרשרת משמורת חתומה.',
+              short: 'תכנון מערכות סגורות, הרשאות גישה וכלים לאימות שלמות מידע ולתיעוד שרשרת משמורת.',
               route: 'cyber'
             },
             {
               id: 'support',
               num: '03',
-              name: 'השכבה התומכת',
-              short: 'SEO טכני, מדידה מדויקת, ייחוס מכירות מקצה לקצה ונוכחות 360°.',
+              name: 'מסחר ומדידה',
+              short: 'חנויות מקוונות, SEO טכני ומדידה שמחברת בין פרסום, פניות ורכישות.',
               route: 'capabilities'
             }
           ],
-          venturesTitle: 'מערכות ומיזמים נבחרים',
-          venturesNote: 'רשימה חלקית. פרטים מלאים נמסרים בשיחה ישירה.',
-          ventures: [
-            { name: 'Heller Digital 360', domain: '360.dovheller.com', tag: 'Field AI · GPS', desc: 'פלטפורמת סוכני שטח עם תמלול קולי, תיוג מיקום בזמן אמת וניתוח AI.' },
-            { name: 'PARKER', domain: 'Global Parker Solutions', tag: 'Urban Telemetry', desc: 'מודיעין חניה בינלאומי, זרימת תשלומים ואינטגרציית חיישנים.' },
-            { name: 'ShukWAY', domain: 'shukway.com', tag: 'Platform · SEO', desc: 'טרנספורמציה דיגיטלית, ארכיטקטורת חיפוש ובעלות מלאה על המיזם.' },
-            { name: 'buyiphone.co.il', domain: 'buyiphone.co.il', tag: 'D2C Commerce', desc: 'תשתית מסחר ורכישת חומרה ישירה לצרכן בישראל.' },
-            { name: 'TrendVault', domain: 'trendvault-shop.online', tag: 'E-Commerce', desc: 'מערך איקומרס אוטומטי למוצרי ארגון ובית.' }
-          ]
+          beliefsTitle: "דברים שאני מאמין בהם",
+          beliefs: ["בלי מצגות מיותרות.","צעד לפני השוק.","בודקים בשטח לפני שמרחיבים.","מערכת טובה אפשר להפעיל גם אחרי שהמפתחים הולכים."]
         },
         about: {
           eyebrow: '01 // PROFILE',
@@ -275,8 +272,7 @@
           lead: 'מייסד הלר דיגיטל (הלר שירותים דיגיטליים בע״מ, ח.פ. 516277902). ירושלים.',
           storyTitle: 'הסיפור והגישה',
           story: [
-            'יוחנן דב בר הלר פועל בצומת שבין ארכיטקטורת מוצר, אוטומציה מבוססת AI ותשתיות שטח. במקום לרדוף אחרי טרנדים, המערכות נבנות מראש עבור השלב הבא של השוק — מסוכנים אוטונומיים שמבצעים פעולות באישור אנושי ועד מערכות סגורות ללא חיבור רשת.',
-            'בשנתיים האחרונות פעל בהונג-קונג ובמוסקבה (רוסיה) בקידום מערכות הגנה ישראליות, לפני שחזר לירושלים ב-2026 כדי לרכז את פעילות המוצר, הסייבר והייצוא.'
+            'יוחנן דב בר הלר פועל בצומת שבין ארכיטקטורת מוצר, אוטומציה מבוססת AI ותשתיות שטח. במקום לרדוף אחרי טרנדים, המערכות נבנות מראש עבור השלב הבא של השוק — מסוכנים אוטונומיים שמבצעים פעולות באישור אנושי ועד מערכות סגורות ללא חיבור רשת.'
           ],
           focusTitle: 'מיקוד נוכחי',
           focus: 'ייצוא תוכנה, סוכני AI תפעוליים, סביבות סגורות ומערכות מסחר וטלמטריה — יחד עם שותפים טכנולוגיים ממוקדים.',
@@ -297,7 +293,7 @@
               { title: 'מערכות CRM וקהילה', desc: 'CRM רב-ארגוני, הרשאות מרובות רמות, תהליכי אישור מובנים.' },
               { title: 'מפות וניווט', desc: 'MapLibre, PMTiles, וניווט פנים בסביבות ללא GPS.' },
               { title: 'סוכני AI שפועלים', desc: 'סוכני עבודה ואוטומציה (Anthropic API, תמלול שטח, ניתוח תפריטים ומסמכים) באישור משתמש.' },
-              { title: 'מסחר ישיר (D2C)', desc: 'הקמה ותפעול תשתיות איקומרס ממוקדות המרה כדוגמת buyiphone.co.il ו-TrendVault.' }
+              { title: 'מסחר ישיר (D2C)', desc: 'הקמה ותפעול של חנויות מקוונות, תהליכי רכישה ואוטומציית הזמנות.' }
             ],
             partnersTitle: 'שותפי פיתוח',
             partnersDesc: 'רשת מצומצמת של מהנדסי תוכנה בכירים, אנשי AI ומעצבי UX/UI הפועלים במודל תא צוותי רזה — ללא שכבות ניהול מיותרות.'
@@ -316,7 +312,7 @@
         proofs: {
           eyebrow: '03 // PROOFS & SYSTEMS',
           title: 'הוכחות יכולת',
-          subtitle: 'מערכות שהופעלו בשטח. לחיצה על כרטיס חושפת את האתגר והפתרון.',
+          subtitle: 'אפיון, דמואים ומערכות שנבנו. בכל כרטיס מופיעים שלב העבודה, האתגר ומה פותח.',
           filters: [
             { id: 'all', label: 'הכל' },
             { id: 'software', label: 'תוכנה ו-AI' },
@@ -326,17 +322,19 @@
           items: [
             {
               id: 'closed-community',
+              stage: 'הכנה לפיילוט',
               cat: 'cyber',
               catLabel: 'תוכנה · סייבר',
               title: 'אפיון מקצה לקצה לקהילה סגורה',
               summary: 'חומרה, CRM עם הרשאות מרובות רמות ו-UX לטאבלט סגור.',
               sector: 'קהילה סגורה',
-              challenge: 'יצירת סביבה דיגיטלית מבוקרת ללא דליפת מידע, המשלבת שליטה ברמת החומרה עם חוויית משתמש פשוטה.',
+              challenge: 'תכנון סביבה דיגיטלית מבוקרת המשלבת פיקוח ברמת החומרה עם חוויית משתמש פשוטה.',
               built: ['אפיון חומרה ייעודית', 'מערכת CRM עם הרשאות מרובות רמות', 'אפיון UX לטאבלט סגור עם פיקוח מובנה'],
               proves: 'אמון, פרטיות ומערכות סגורות לצד אפיון מוצר מקצה לקצה.'
             },
             {
               id: 'luxury-crm',
+              stage: 'דמו',
               cat: 'software',
               catLabel: 'תוכנה · AI',
               title: 'CRM וסוכנת AI לתיווך יוקרה',
@@ -348,17 +346,19 @@
             },
             {
               id: 'chain-of-custody',
+              stage: 'פיתוח',
               cat: 'cyber',
               catLabel: 'סייבר · פורנזיקה',
               title: 'שחזור נתונים עם שרשרת משמורת',
               summary: 'כלי שחזור ואימות שמפיק דוח PDF חתום.',
               sector: 'משפט, פורנזיקה וארגונים רגישים',
               challenge: 'הוכחת שלמות הנתונים המשוחזרים תחת ביקורת משפטית ושרשרת משמורת מחמירה.',
-              built: ['כלי שחזור ואימות נתונים', 'אימות קריפטוגרפי בחתימת SHA-256', 'הפקת דוח PDF חתום ותיעוד משמורת'],
+              built: ['כלי שחזור ואימות נתונים', 'אימות שלמות קבצים באמצעות SHA-256', 'הפקת דוח PDF חתום ותיעוד משמורת'],
               proves: 'אמון, שלמות מידע ותשתית קריפטוגרפית מדידה.'
             },
             {
               id: 'judaica',
+              stage: 'פרויקט שהסתיים',
               cat: 'support',
               catLabel: 'תמיכה · מסחר',
               title: 'נוכחות דיגיטלית לחנות ומפעל יודאיקה',
@@ -367,28 +367,6 @@
               challenge: 'חיבור ישיר בין הוצאת הפרסום בדיגיטל לבין שיחות טלפון ורכישות פיזיות בחנות.',
               built: ['אתר ומערך קמפיינים', 'ייחוס מכירות (מודעה ← שיחה ← קנייה)', 'CRM וסיור וירטואלי 360°'],
               proves: 'מדידה וייחוס מכירות מלאים בין דיגיטל לפיזי.'
-            },
-            {
-              id: 'buyiphone',
-              cat: 'support',
-              catLabel: 'תוכנה · מסחר D2C',
-              title: 'buyiphone.co.il',
-              summary: 'מערך מסחר ישיר לצרכן (D2C) למוצרי אפל בישראל.',
-              sector: 'קמעונאות טכנולוגיה',
-              challenge: 'בניית נוכחות ממוקדת המרה, אמון ומהירות רכישה בשוק חומרה תחרותי.',
-              built: ['ארכיטקטורת חנות וזרימת רכישה', 'SEO ממוקד כוונת קנייה', 'מערך מדידה ואוטומציית הזמנות'],
-              proves: 'הובלת ערוצי D2C מהירים ורווחיים.'
-            },
-            {
-              id: 'parker-360',
-              cat: 'software',
-              catLabel: 'תוכנה · AI וטלמטריה',
-              title: 'PARKER & Heller Digital 360',
-              summary: 'מודיעין חניה בינלאומי וסטודיו AI לסוכני שטח.',
-              sector: 'ערים חכמות · מכירות שטח',
-              challenge: 'איחוד מקורות מידע אורבניים מרובי מדינות והנגשת כלי AI בזמן אמת בשטח.',
-              built: ['דשבורד ערים בינלאומיות (PARKER)', 'תיוג GPS בזמן אמת ותמלול קולי (360)', 'אינטגרציית Anthropic API לניתוח שטח'],
-              proves: 'יכולת מחקר, בניית דאטה והרצה גלובלית.'
             }
           ]
         },
@@ -455,7 +433,7 @@
         home: {
           eyebrow: 'DOV HELLER · PRODUCT & INFRASTRUCTURE ARCHITECT',
           headline: 'Those who know, know.',
-          subhead: 'Dov Heller architects software platforms, autonomous AI agents, and closed systems — consistently shipping ahead of market consensus.',
+          subhead: 'I’m Dov Heller, founder of HDIGITAL. I design and build software for Israeli and international markets, including CRM systems, AI agents, and infrastructure for sensitive data.',
           ctaPrimary: 'View Proofs',
           ctaSecondary: 'Direct Contact',
           pillarsTitle: 'Core Architecture',
@@ -477,20 +455,13 @@
             {
               id: 'support',
               num: '03',
-              name: 'Supporting Layer',
-              short: 'Technical SEO, full-funnel attribution, telemetry, and 360° presence.',
+              name: 'Commerce & Measurement',
+              short: 'Online stores, technical SEO, and measurement connecting ads, inquiries, and purchases.',
               route: 'capabilities'
             }
           ],
-          venturesTitle: 'Selected Systems & Ventures',
-          venturesNote: 'Partial index. Full specifics upon direct inquiry.',
-          ventures: [
-            { name: 'Heller Digital 360', domain: '360.dovheller.com', tag: 'Field AI · GPS', desc: 'Field-agent platform with real-time GPS tagging, voice transcription, and AI analysis.' },
-            { name: 'PARKER', domain: 'Global Parker Solutions', tag: 'Urban Telemetry', desc: 'International parking intelligence, payment operator mapping, and sensor integration.' },
-            { name: 'ShukWAY', domain: 'shukway.com', tag: 'Platform · SEO', desc: 'Digital transformation, search architecture, and full venture ownership.' },
-            { name: 'buyiphone.co.il', domain: 'buyiphone.co.il', tag: 'D2C Commerce', desc: 'Direct-to-consumer Apple hardware commerce infrastructure in Israel.' },
-            { name: 'TrendVault', domain: 'trendvault-shop.online', tag: 'E-Commerce', desc: 'Automated home-organization e-commerce system.' }
-          ]
+          beliefsTitle: "Things I believe",
+          beliefs: ["Keep presentations to what the work needs.","Think a step ahead of the market.","Test in the field before scaling.","A good system is one the team can run after the developers move on."]
         },
         about: {
           eyebrow: '01 // PROFILE',
@@ -498,8 +469,7 @@
           lead: 'Founder of Heller Digital Ltd. (Co. No. 516277902). Jerusalem.',
           storyTitle: 'Background & Trajectory',
           story: [
-            'Yochanan Dov Ber Heller operates at the intersection of product architecture, AI automation, and field-deployed systems. Rather than following industry cycles, systems are built ahead of the curve — from Hebrew-speaking AI agents with human-in-the-loop sign-off to air-gapped hardware specs.',
-            'Over the past two years, he resided in Hong Kong and Moscow, Russia advancing Israeli defense systems before consolidating product, cyber, and export operations back in Jerusalem in 2026.'
+            'Yochanan Dov Ber Heller operates at the intersection of product architecture, AI automation, and field-deployed systems. Rather than following industry cycles, systems are built ahead of the curve — from Hebrew-speaking AI agents with human-in-the-loop sign-off to air-gapped hardware specs.'
           ],
           focusTitle: 'Current Focus',
           focus: 'Software export, operational AI agents, closed systems, and D2C/telemetry platforms — alongside vetted engineering partners.',
@@ -520,7 +490,7 @@
               { title: 'CRM & Community Systems', desc: 'Multi-organisation CRMs, multi-tier permissions, structured approval workflows.' },
               { title: 'Maps & Navigation', desc: 'MapLibre, PMTiles, and indoor navigation without GPS.' },
               { title: 'AI Agents That Act', desc: 'Operational agents (Anthropic API, field transcription, menu/doc analysis) executing with user approval.' },
-              { title: 'Direct Commerce (D2C)', desc: 'High-intent acquisition and store infrastructure including buyiphone.co.il and TrendVault.' }
+              { title: 'Direct Commerce (D2C)', desc: 'Online storefronts, checkout flows, and order automation.' }
             ],
             partnersTitle: 'Development Partners',
             partnersDesc: 'A lean, compartmentalized pod of senior software engineers, AI specialists, and UI/UX designers — zero agency bloat.'
@@ -539,7 +509,7 @@
         proofs: {
           eyebrow: '03 // PROOFS & SYSTEMS',
           title: 'Proofs of Execution',
-          subtitle: 'Systems deployed in the field. Select any entry to inspect the challenge and build.',
+          subtitle: 'Selected design and engineering work. Each card shows its stage, challenge, and what we built.',
           filters: [
             { id: 'all', label: 'All' },
             { id: 'software', label: 'Software & AI' },
@@ -549,17 +519,19 @@
           items: [
             {
               id: 'closed-community',
+              stage: 'Pilot preparation',
               cat: 'cyber',
               catLabel: 'Software · Cyber',
               title: 'End-to-end spec for a closed community',
               summary: 'Hardware, multi-level CRM permissions, and closed-tablet UX.',
               sector: 'Closed community',
-              challenge: 'Building a supervised digital environment with zero data leakage, pairing hardware-level control with clean usability.',
+              challenge: 'Designing a supervised digital environment that combines hardware-level controls with a straightforward user experience.',
               built: ['Dedicated hardware specification', 'Multi-tier permission CRM', 'Closed-tablet UX with built-in supervision'],
               proves: 'Trust, privacy, and closed systems alongside end-to-end product architecture.'
             },
             {
               id: 'luxury-crm',
+              stage: 'Demo',
               cat: 'software',
               catLabel: 'Software · AI',
               title: 'CRM & AI agent for luxury real estate',
@@ -571,17 +543,19 @@
             },
             {
               id: 'chain-of-custody',
+              stage: 'In development',
               cat: 'cyber',
               catLabel: 'Cyber · Forensics',
               title: 'Data recovery with chain of custody',
               summary: 'Recovery and verification tool producing a signed PDF report.',
               sector: 'Legal, forensics & sensitive orgs',
               challenge: 'Proving recovered data integrity under strict legal and chain-of-custody scrutiny.',
-              built: ['Data recovery & verification utility', 'SHA-256 cryptographic signing', 'Signed PDF report & custody log'],
+              built: ['Data recovery & verification utility', 'File integrity verification with SHA-256', 'Signed PDF report & custody log'],
               proves: 'Verifiable trust, integrity, and forensic rigor.'
             },
             {
               id: 'judaica',
+              stage: 'Completed engagement',
               cat: 'support',
               catLabel: 'Support · Commerce',
               title: 'Digital presence for Judaica shop & factory',
@@ -590,28 +564,6 @@
               challenge: 'Linking digital ad spend directly to phone inquiries and physical in-store sales.',
               built: ['Website & ad campaigns', 'Full-funnel attribution (ad -> call -> store)', 'CRM & 360° virtual tour'],
               proves: 'End-to-end attribution across online and physical retail.'
-            },
-            {
-              id: 'buyiphone',
-              cat: 'support',
-              catLabel: 'Software · D2C',
-              title: 'buyiphone.co.il',
-              summary: 'Direct-to-consumer Apple hardware commerce in Israel.',
-              sector: 'Consumer tech retail',
-              challenge: 'Building a high-trust, fast-converting D2C storefront in a competitive hardware market.',
-              built: ['Storefront & checkout architecture', 'High-intent SEO', 'Telemetry & order automation'],
-              proves: 'Execution in lean, high-velocity D2C commerce.'
-            },
-            {
-              id: 'parker-360',
-              cat: 'software',
-              catLabel: 'Software · AI & Telemetry',
-              title: 'PARKER & Heller Digital 360',
-              summary: 'Global urban parking telemetry and field-sales AI studio.',
-              sector: 'Smart cities · Field sales',
-              challenge: 'Unifying multi-country urban data feeds and delivering real-time AI tools in the field.',
-              built: ['International city dashboard (PARKER)', 'Real-time GPS & voice transcription (360)', 'Anthropic API field analysis'],
-              proves: 'Deep data synthesis and global product execution.'
             }
           ]
         },
@@ -662,11 +614,8 @@
     const CYBER_DATA = {
       en: {
         badge: 'COMPARTMENTALIZED BRIEFING // EN',
-        coords: 'HKG 22.3193° N · MOW 55.7558° N · JRS 31.7683° N',
         title: 'Cyber, Closed Systems & Field Operations',
-        lead: 'Trust engineering, air-gapped architectures, and sovereign defense-tech representation.',
-        fieldNoteTitle: 'Field Presence: Hong Kong & Moscow',
-        fieldNoteBody: 'Over the past two years, Dov Heller operated from Hong Kong and Moscow, Russia — advancing Israeli defense systems and cross-border security architectures before consolidating operations in Jerusalem.',
+        lead: 'Privacy engineering, closed systems, and data integrity.',
         pillars: [
           {
             code: 'SYS-01',
@@ -691,25 +640,21 @@
         ],
         partnersTitle: 'Cyber & Defense Partners',
         partnersBody: 'Vetted Israeli defense-tech and forensic engineering partners operating under strict NDA and compartmentalized protocols. Introductions are handled privately.',
-        toggleLabel: 'קרא בעברית (HE)'
       },
       he: {
         badge: 'תדריך ממודר // HE',
-        coords: 'HKG 22.3193° N · MOW 55.7558° N · JRS 31.7683° N',
         title: 'סייבר, מערכות סגורות ופעילות בינלאומית',
-        lead: 'הנדסת אמון, ארכיטקטורות מנותקות רשת וקידום מערכות הגנה ישראליות.',
-        fieldNoteTitle: 'נוכחות שטח: הונג-קונג ומוסקבה',
-        fieldNoteBody: 'בשנתיים האחרונות התגורר דב הלר בהונג-קונג ובמוסקבה (רוסיה) לקידום מערכות הגנה ישראליות, לפני ריכוז הפעילות חזרה בירושלים.',
+        lead: 'הנדסת פרטיות, מערכות סגורות ואימות שלמות מידע.',
         pillars: [
           {
             code: 'SYS-01',
             title: 'מערכות סגורות וללא Wi-Fi',
-            desc: 'ארכיטקטורות המתוכננות לסביבות מבודדות פיזית עם פיקוח ברמת החומרה ואפס זליגת מידע.'
+            desc: 'ארכיטקטורות המתוכננות לסביבות מבודדות פיזית עם פיקוח ברמת החומרה ובקרת גישה.'
           },
           {
             code: 'SYS-02',
             title: 'שחזור נתונים ושרשרת משמורת',
-            desc: 'כלי שחזור ואימות המפיקים חתימות SHA-256 ודוח PDF חתום לקבילות משפטית.'
+            desc: 'כלי אימות המשתמשים ב־SHA-256 לבדיקת שלמות קבצים ומפיקים דוח PDF חתום לתיעוד שרשרת משמורת.'
           },
           {
             code: 'SYS-03',
@@ -724,7 +669,6 @@
         ],
         partnersTitle: 'שותפי סייבר והגנה',
         partnersBody: 'רשת שותפי פורנזיקה וטכנולוגיות הגנה ישראליות הפועלת תחת הסכמי סודיות ומידור מחמירים. חיבורים מתבצעים בהיכרות ישירה בלבד.',
-        toggleLabel: 'Switch to English (EN)'
       }
     };
 
@@ -732,11 +676,11 @@
       he: {
         privacy: {
           title: 'מדיניות פרטיות',
-          body: '<p><strong>בעל האתר:</strong> הלר שירותים דיגיטליים בע״מ (ח.פ. 516277902), כנפי נשרים 68, מרכז אורנים, ירושלים.</p><p><strong>איסוף מידע:</strong> בטופס יצירת הקשר המידע מעובד מקומית בדפדפן להכנת פנייה בדוא״ל או וואטסאפ. איננו מוכרים מידע אישי לצדדים שלישיים.</p><p><strong>זכויות:</strong> בהתאם לחוק הגנת הפרטיות, התשמ״א-1981, ניתן לפנות ל-dovheller@gmail.com בכל בקשה.</p>'
+          body: '<p><strong>בעל האתר:</strong> הלר שירותים דיגיטליים בע״מ (ח.פ. 516277902), כנפי נשרים 68, מרכז אורנים, ירושלים.</p><p><strong>איסוף מידע:</strong> בטופס יצירת הקשר המידע מעובד מקומית בדפדפן להכנת פנייה בדוא״ל או וואטסאפ. איננו מוכרים מידע אישי לצדדים שלישיים.</p><p><strong>זכויות:</strong> בהתאם לחוק הגנת הפרטיות, התשמ״א-1981, ניתן לפנות ל-contact@dovheller.com בכל בקשה.</p>'
         },
         accessibility: {
           title: 'הצהרת נגישות',
-          body: '<p>האתר נבנה בהתאם לתקן ישראלי ת״י 5568 (WCAG 2.0 AA): ניווט מקלדת מלא, היררכיית כותרות סמנטית, תמיכה ב-RTL/LTR וכיבוד העדפת הפחתת תנועה.</p><p><strong>רכז נגישות:</strong> דב הלר · dovheller@gmail.com · 052-5610123.</p>'
+          body: '<p>האתר נבנה בהתאם לתקן ישראלי ת״י 5568 (WCAG 2.0 AA): ניווט מקלדת מלא, היררכיית כותרות סמנטית, תמיכה ב-RTL/LTR וכיבוד העדפת הפחתת תנועה.</p><p><strong>רכז נגישות:</strong> דב הלר · contact@dovheller.com · 052-5610123.</p>'
         },
         terms: {
           title: 'תנאי שימוש',
@@ -746,11 +690,11 @@
       en: {
         privacy: {
           title: 'Privacy Policy',
-          body: '<p><strong>Operator:</strong> Heller Digital Ltd. (Co. No. 516277902), 68 Kanfei Nesharim St., Oranim Center, Jerusalem.</p><p><strong>Data handling:</strong> Contact inquiries are prepared locally in your browser for direct email or WhatsApp dispatch. We do not sell personal data.</p><p><strong>Rights:</strong> Under Israeli Protection of Privacy Law (5741-1981), contact dovheller@gmail.com.</p>'
+          body: '<p><strong>Operator:</strong> Heller Digital Ltd. (Co. No. 516277902), 68 Kanfei Nesharim St., Oranim Center, Jerusalem.</p><p><strong>Data handling:</strong> Contact inquiries are prepared locally in your browser for direct email or WhatsApp dispatch. We do not sell personal data.</p><p><strong>Rights:</strong> Under Israeli Protection of Privacy Law (5741-1981), contact contact@dovheller.com.</p>'
         },
         accessibility: {
           title: 'Accessibility Statement',
-          body: '<p>Built to meet Israeli Standard 5568 (WCAG 2.0 AA): full keyboard navigation, semantic landmarks, RTL/LTR support, and reduced-motion compliance.</p><p><strong>Coordinator:</strong> Dov Heller · dovheller@gmail.com · +972-52-5610123.</p>'
+          body: '<p>Built to meet Israeli Standard 5568 (WCAG 2.0 AA): full keyboard navigation, semantic landmarks, RTL/LTR support, and reduced-motion compliance.</p><p><strong>Coordinator:</strong> Dov Heller · contact@dovheller.com · +972-52-5610123.</p>'
         },
         terms: {
           title: 'Terms of Use',
@@ -758,33 +702,6 @@
         }
       }
     };
-
-    function showToast(msg) {
-      const t = document.getElementById('toast');
-      t.textContent = msg;
-      t.classList.remove('hidden');
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => t.classList.add('hidden'), 2800);
-    }
-
-    function copyText(val, label) {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(val).then(() => showToast(label)).catch(() => fallbackCopy(val, label));
-      } else {
-        fallbackCopy(val, label);
-      }
-    }
-
-    function fallbackCopy(val, label) {
-      const ta = document.createElement('textarea');
-      ta.value = val;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); showToast(label); } catch (e) {}
-      document.body.removeChild(ta);
-    }
 
     function renderHome(d) {
       const h = d.home;
@@ -814,7 +731,7 @@
             </div>
             <div class="flex flex-wrap gap-2.5">
               ${h.pillars.map(p => `
-                <button type="button" data-pillar="${p.id}" class="pillar-pill ${STATE.activePillar === p.id ? 'active' : ''} px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                <button type="button" data-pillar="${p.id}" aria-pressed="${STATE.activePillar === p.id}" class="pillar-pill ${STATE.activePillar === p.id ? 'active' : ''} px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full ${STATE.activePillar === p.id ? 'bg-sky-400' : 'bg-slate-400'}"></span>
                   <span class="mono text-xs opacity-60">${p.num}</span>
                   <span>${p.name}</span>
@@ -835,26 +752,11 @@
             </div>
           </div>
 
-          <!-- Selected Ventures -->
-          <div class="space-y-5 pt-4 hairline-t">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-              <h2 class="text-xs mono uppercase tracking-widest" style="color: var(--muted);">${h.venturesTitle}</h2>
-              <span class="text-xs" style="color: var(--muted);">${h.venturesNote}</span>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-              ${h.ventures.map(v => `
-                <div class="surface-card rounded-lg p-5 flex flex-col justify-between gap-3">
-                  <div class="space-y-2">
-                    <div class="flex items-center justify-between gap-2">
-                      <h3 class="font-bold text-base" style="color: var(--navy);">${v.name}</h3>
-                      <span class="mono text-[11px] px-2 py-0.5 rounded border" style="border-color: var(--border); color: var(--muted);">${v.tag}</span>
-                    </div>
-                    <p class="text-sm leading-relaxed" style="color: var(--muted);">${v.desc}</p>
-                  </div>
-                  <div class="mono text-xs text-sky-600">${v.domain}</div>
-                </div>
-              `).join('')}
-            </div>
+          <div class="space-y-4 pt-4 hairline-t">
+            <h2 class="text-lg font-bold" style="color: var(--navy);">${h.beliefsTitle}</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              ${h.beliefs.map(belief => `<li class="surface-card rounded-lg p-4">${belief}</li>`).join('')}
+            </ul>
           </div>
         </section>
       `;
@@ -938,30 +840,19 @@
     }
 
     function renderCyber() {
-      const cd = CYBER_DATA[STATE.cyberLang] || CYBER_DATA.en;
-      const isHe = STATE.cyberLang === 'he';
+      const cd = CYBER_DATA[STATE.lang];
       return `
-        <section dir="${isHe ? 'rtl' : 'ltr'}" class="space-y-8">
+        <section class="space-y-8">
           <div class="flex flex-wrap items-center justify-between gap-3">
             <div class="flex items-center gap-2.5">
               <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
               <span class="mono text-xs tracking-widest text-sky-400">${cd.badge}</span>
             </div>
-            <button type="button" id="cyber-lang-toggle" class="mono text-xs px-3 py-1.5 rounded border border-slate-700 text-slate-300 hover:border-sky-400 hover:text-white transition-colors">
-              ${cd.toggleLabel}
-            </button>
           </div>
 
           <div class="space-y-3 max-w-3xl">
-            <div class="mono text-[11px] text-slate-400 tracking-wider">${cd.coords}</div>
             <h1 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">${cd.title}</h1>
             <p class="text-base sm:text-lg text-slate-300 leading-relaxed">${cd.lead}</p>
-          </div>
-
-          <!-- International Field Note: Hong Kong & Moscow -->
-          <div class="rounded-xl p-6 border border-sky-500/30 bg-slate-900/80 space-y-2 max-w-3xl">
-            <div class="mono text-xs uppercase tracking-widest text-sky-400">${cd.fieldNoteTitle}</div>
-            <p class="text-sm sm:text-base text-slate-200 leading-relaxed">${cd.fieldNoteBody}</p>
           </div>
 
           <!-- 4 Cyber Systems -->
@@ -996,7 +887,7 @@
 
           <div class="flex flex-wrap gap-2">
             ${pr.filters.map(f => `
-              <button type="button" data-proof-filter="${f.id}" class="px-3.5 py-1.5 rounded-full text-xs font-medium border transition-colors ${STATE.proofFilter === f.id ? 'bg-navy text-white border-navy' : ''}" style="${STATE.proofFilter === f.id ? '' : 'border-color: var(--border); color: var(--muted);'}">
+              <button type="button" data-proof-filter="${f.id}" aria-pressed="${STATE.proofFilter === f.id}" class="px-3.5 py-1.5 rounded-full text-xs font-medium border transition-colors ${STATE.proofFilter === f.id ? 'bg-navy text-white border-navy' : ''}" style="${STATE.proofFilter === f.id ? '' : 'border-color: var(--border); color: var(--muted);'}">
                 ${f.label}
               </button>
             `).join('')}
@@ -1010,7 +901,7 @@
                   <div class="space-y-2.5">
                     <div class="flex items-center justify-between gap-2">
                       <span class="mono text-[11px] text-sky-600">${item.catLabel}</span>
-                      <span class="text-[11px]" style="color: var(--muted);">${item.sector}</span>
+                      <span class="text-[11px]" style="color: var(--muted);">${item.stage}</span>
                     </div>
                     <h3 class="text-lg font-bold" style="color: var(--navy);">${item.title}</h3>
                     <p class="text-sm leading-relaxed" style="color: var(--muted);">${item.summary}</p>
@@ -1035,7 +926,7 @@
                     </div>
                   ` : ''}
 
-                  <button type="button" data-toggle-proof="${item.id}" class="self-start text-xs mono text-sky-600 hover:underline pt-1">
+                  <button type="button" data-toggle-proof="${item.id}" aria-expanded="${isOpen}" class="self-start text-xs mono text-sky-600 hover:underline pt-1">
                     ${isOpen ? (STATE.lang === 'he' ? 'סגור פרטים ▲' : 'Collapse ▲') : (STATE.lang === 'he' ? 'הצג מפרט מלא ▼' : 'Inspect Spec ▼')}
                   </button>
                 </article>
@@ -1109,7 +1000,7 @@
                 <div class="text-sm font-bold text-emerald-600">${ct.readyTitle}</div>
                 <p class="text-xs" style="color: var(--muted);">${ct.readyDesc}</p>
                 <div class="flex flex-wrap gap-2.5">
-                  <a id="dispatch-mail" href="mailto:dovheller@gmail.com" target="_blank" rel="noopener" class="px-4 py-2 rounded-md text-xs font-medium bg-navy text-white">${ct.openMail}</a>
+                  <a id="dispatch-mail" href="mailto:contact@dovheller.com" target="_blank" rel="noopener" class="px-4 py-2 rounded-md text-xs font-medium bg-navy text-white">${ct.openMail}</a>
                   <a id="dispatch-wa" href="https://wa.me/972525610123" target="_blank" rel="noopener" class="px-4 py-2 rounded-md text-xs font-medium border" style="border-color: var(--border);">${ct.openWa}</a>
                 </div>
               </div>
@@ -1120,11 +1011,11 @@
               <div class="space-y-3 text-sm">
                 <div>
                   <span class="text-xs block" style="color: var(--muted);">Email</span>
-                  <button type="button" data-copy="dovheller@gmail.com" class="mono text-sky-600 hover:underline">dovheller@gmail.com</button>
+                  <a href="mailto:contact@dovheller.com" dir="ltr" class="mono text-sky-600 hover:underline">contact@dovheller.com</a>
                 </div>
                 <div>
                   <span class="text-xs block" style="color: var(--muted);">Phone / WhatsApp</span>
-                  <button type="button" data-copy="+972-52-5610123" dir="ltr" class="mono text-sky-600 hover:underline">+972-52-5610123</button>
+                  <a href="tel:+972525610123" dir="ltr" class="mono text-sky-600 hover:underline">+972-52-5610123</a>
                 </div>
                 <div>
                   <span class="text-xs block" style="color: var(--muted);">Office</span>
@@ -1170,15 +1061,6 @@
         });
       });
 
-      // Cyber language toggle
-      const cyberToggle = document.getElementById('cyber-lang-toggle');
-      if (cyberToggle) {
-        cyberToggle.addEventListener('click', () => {
-          STATE.cyberLang = STATE.cyberLang === 'en' ? 'he' : 'en';
-          render();
-        });
-      }
-
       // Proofs filters & expand
       document.querySelectorAll('[data-proof-filter]').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1191,14 +1073,6 @@
           const id = btn.dataset.toggleProof;
           STATE.expandedProof = STATE.expandedProof === id ? null : id;
           render();
-        });
-      });
-
-      // Copy buttons
-      document.querySelectorAll('[data-copy]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const val = btn.dataset.copy;
-          copyText(val, STATE.lang === 'he' ? 'הועתק: ' + val : 'Copied: ' + val);
         });
       });
 
@@ -1227,7 +1101,7 @@
           const msg = fields[2].el.value.trim();
           const subject = encodeURIComponent('dovheller.com — ' + name);
           const body = encodeURIComponent('From: ' + name + '\nReply to: ' + reply + '\n\n' + msg);
-          document.getElementById('dispatch-mail').href = 'mailto:dovheller@gmail.com?subject=' + subject + '&body=' + body;
+          document.getElementById('dispatch-mail').href = 'mailto:contact@dovheller.com?subject=' + subject + '&body=' + body;
           document.getElementById('dispatch-wa').href = 'https://wa.me/972525610123?text=' + body;
           document.getElementById('dispatch-box').classList.remove('hidden');
         });
