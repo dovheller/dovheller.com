@@ -59,3 +59,9 @@ body.cyber-mode #main-content .surface-card p{color:#cbd5e1}
 .cyber-field img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 30%;display:block}
 @media(min-width:720px){.cyber-field{grid-template-columns:2fr 3fr;align-items:center}.cyber-field img{aspect-ratio:4/5;height:100%}}
 .approach-photo{display:block;width:min(260px,60%);aspect-ratio:1/1;object-fit:cover;object-position:center 25%;border-radius:14px}
+.tw-moments img.wide{grid-column:span 2;aspect-ratio:auto;height:100%}
+.cyber-field img{object-position:20% center}
+.cyber-trips{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.cyber-trips img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;border-radius:12px}
+.contact-photo{display:block;width:min(240px,55%);aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:14px;filter:grayscale(1)}
+.approach-photo{aspect-ratio:4/5!important}
