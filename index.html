@@ -294,6 +294,107 @@
       .cyber-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .cyber-kpi:first-child { grid-column: 1 / -1; }
     }
+    .home-layout { display: grid; gap: clamp(38px, 7vw, 100px); }
+    .home-hero {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      align-items: center;
+      gap: clamp(24px, 4.8vw, 70px);
+    }
+    .home-hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -32px 0 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 25% 54%, #dbeef8 0, transparent 54%);
+      opacity: .74;
+    }
+    .home-hero .home-headline { font-size: clamp(3.55rem, 8vw, 6.3rem); }
+    .home-hero .home-contact { border-radius: 999px; padding-inline: 20px; }
+    .home-case {
+      min-inline-size: 0;
+      overflow: hidden;
+      margin: 0;
+      border-radius: clamp(19px, 3vw, 33px);
+      border: 1px solid #314459;
+      color: #eff8ff;
+      background: radial-gradient(ellipse at 68% 8%, #203e53, transparent 64%), #101d2b;
+      box-shadow: 0 26px 52px -34px #172f56;
+      padding: clamp(17px, 3vw, 29px);
+      font-variant-numeric: tabular-nums;
+    }
+    .home-case figcaption {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      border-block-end: 1px solid #375066;
+      padding-block-end: 12px;
+      color: #c0d2e0;
+      font-size: .94rem;
+    }
+    .home-case figcaption strong { color: white; font-size: 1.1rem; }
+    .home-case-flow { display: grid; gap: 9px; margin-block: 15px; }
+    .home-case-flow li {
+      display: grid;
+      grid-template-columns: minmax(5.1rem, auto) minmax(0, 1fr) 3.3rem;
+      align-items: center;
+      min-height: 25px;
+      gap: 8px;
+      font-size: .95rem;
+    }
+    .home-case-flow bdi { text-align: end; }
+    .home-case-track { block-size: 4px; overflow: hidden; border-radius: 8px; background: #374e61; }
+    .home-case-track span {
+      display: block;
+      inline-size: var(--bar);
+      min-inline-size: 2px;
+      block-size: 100%;
+      border-radius: inherit;
+      background: #a8c4d9;
+    }
+    .home-case-flow li:nth-child(3) .home-case-track span { background: #7dd3fc; }
+    .home-case-finding { border-inline-start: 2px solid #7dd3fc; padding-inline-start: 11px; line-height: 1.3; }
+    .home-case-finding strong { display: block; color: #9ce0ff; font-size: clamp(1.45rem, 3vw, 1.8rem); }
+    .home-case-finding p { margin-block-start: 5px; color: #dbeaf5; font-size: 1rem; }
+    .home-case-jump { display: inline-block; margin-block-start: 13px; color: #dbeaf5; text-decoration: underline; text-underline-offset: 3px; }
+    .home-journal {
+      scroll-margin-block-start: 88px;
+      border-radius: clamp(18px, 3vw, 30px);
+      border: 1px solid #d4e2eb;
+      background: #edf4f8;
+      padding: clamp(18px, 4vw, 39px);
+    }
+    .home-journal h2 { color: var(--navy); font-size: clamp(1.75rem, 5vw, 2.65rem); font-weight: 700; }
+    .home-journal li {
+      display: grid;
+      grid-template-columns: 3.5rem minmax(0, 1fr);
+      gap: 5px 12px;
+      border-block-start: 1px solid #cfdee8;
+      padding-block: 10px;
+      color: #344b60;
+      line-height: 1.25;
+    }
+    .home-journal li:first-child { margin-block-start: 8px; }
+    .home-journal li:last-child { color: #1a5480; font-weight: 600; }
+    .home-journal time { color: #36627e; font-variant-numeric: tabular-nums; }
+    .home-journal strong { font-weight: 700; }
+    @media (min-width: 800px) {
+      .home-hero { grid-template-columns: .98fr 1fr; min-height: min(61vh, 570px); }
+      .home-layout .home-method { padding-block: clamp(35px, 6vw, 72px); }
+      .home-journal { display: grid; grid-template-columns: .55fr 1fr; gap: 24px; }
+      .home-journal li:first-child { margin-block-start: 0; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      html:has(.home-layout) { scroll-behavior: smooth; }
+      .home-journal.is-revealed li { animation: home-arrive .55s cubic-bezier(.2,.7,.2,1) both; }
+      .home-journal.is-revealed li:nth-child(2) { animation-delay: 70ms; }
+      .home-journal.is-revealed li:nth-child(3) { animation-delay: 140ms; }
+      .home-journal.is-revealed li:nth-child(4) { animation-delay: 210ms; }
+      @keyframes home-arrive { from { opacity: .2; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    }
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; animation: none !important; }
     }
@@ -352,7 +453,9 @@
 
   <!-- Main Content -->
   <main id="main-content" class="flex-1 max-w-5xl w-full mx-auto px-5 py-10 md:py-14">
-    <div class="home-opening">
+        <section class="home-layout">
+          <div class="home-hero">
+          <div class="home-opening">
             <p class="home-byline">דב הלר, מייסד הלר דיגיטל</p>
             <h1 class="home-headline">אני יודע<br><em>מה לחפש.</em></h1>
             <p class="home-intro">איפה הלקוח מתעכב? מה קורה לפנייה אחרי שהיא נכנסת? כשמכירים את העבודה בשיווק, במכירות ובתוכנה, יודעים גם איפה להסתכל קודם.</p>
@@ -361,6 +464,58 @@
               <a href="?view=proofs" data-go="proofs" class="home-work">מה כבר בנינו</a>
             </div>
           </div>
+
+            <figure class="home-case">
+              <figcaption><strong>תיק בדיקה</strong><span>נתונים להמחשה</span></figcaption>
+              <ol class="home-case-flow">
+                
+                  <li>
+                    <span>קליקים</span>
+                    <span class="home-case-track" aria-hidden="true"><span style="--bar: 100%"></span></span>
+                    <bdi>1,240</bdi>
+                  </li>
+                
+                  <li>
+                    <span>פניות</span>
+                    <span class="home-case-track" aria-hidden="true"><span style="--bar: 6.935483870967742%"></span></span>
+                    <bdi>86</bdi>
+                  </li>
+                
+                  <li>
+                    <span>שיחה ראשונה</span>
+                    <span class="home-case-track" aria-hidden="true"><span style="--bar: 0.3225806451612903%"></span></span>
+                    <bdi>4</bdi>
+                  </li>
+                
+                  <li>
+                    <span>עסקה</span>
+                    <span class="home-case-track" aria-hidden="true"><span style="--bar: 0.08064516129032258%"></span></span>
+                    <bdi>1</bdi>
+                  </li>
+                
+              </ol>
+              <div class="home-case-finding">
+                <strong>86 פניות. רק ארבע שיחות.</strong>
+                <p>82 פניות נשארו בלי שיחה ראשונה. כאן אני מתחיל לבדוק את המעבר למכירות.</p>
+              </div>
+              <a class="home-case-jump" href="#home-journal">איך הגענו לזה</a>
+            </figure>
+          </div>
+
+          <section id="home-journal" class="home-journal" aria-labelledby="home-journal-title">
+            <h2 id="home-journal-title">מי בדק מה</h2>
+            <ol>
+              
+                <li><time datetime="09:00" dir="ltr">09:00</time><span><strong>שיווק</strong> · בדק מאיפה הגיעו הפניות.</span></li>
+              
+                <li><time datetime="09:20" dir="ltr">09:20</time><span><strong>מכירות</strong> · בדקו כמה זמן לקח לחזור ללקוחות.</span></li>
+              
+                <li><time datetime="09:40" dir="ltr">09:40</time><span><strong>CRM</strong> · בדק מי קיבל אחריות על כל פנייה.</span></li>
+              
+                <li><time datetime="10:00" dir="ltr">10:00</time><span><strong>דב</strong> · מתחילים מהעברת הפנייה לאיש המכירות.</span></li>
+              
+            </ol>
+          </section>
 
           <section class="home-method" aria-labelledby="home-method-title">
             <div>
@@ -371,6 +526,55 @@
               <li><h3>המומחה מנסח את השאלה</h3><p>הוא יודע מה לחפש בתחום שלו ומה צריך לבדוק לפני שמחליטים.</p></li><li><h3>הסוכנים בודקים ומתעדים</h3><p>כל צוות בודק את מה שהוגדר לו. יומן העבודה מסתנכרן איתי במרווחים קבועים, עם הממצאים והשאלות הפתוחות.</p></li><li><h3>אני מחבר בין התחומים</h3><p>כשקמפיין מביא פניות ואף אחת לא הופכת לשיחה, אני בודק מה קורה במעבר למכירות. לפעמים זה הדבר הראשון שצריך לתקן כדי להקדים את המתחרים.</p></li>
             </ol>
           </section>
+
+          <!-- Engine Room / Interactive 3 Pillars -->
+          <div class="space-y-5 pt-4 hairline-t">
+            <div class="flex items-center justify-between">
+              <h2 class="text-xl font-bold" style="color: var(--navy);">תחומי העבודה</h2>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              
+                <button type="button" data-pillar="software" aria-pressed="true" class="pillar-pill active px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                  <span class="mono text-xs opacity-60">01</span>
+                  <span>תוכנה ו-AI</span>
+                </button>
+              
+                <button type="button" data-pillar="cyber" aria-pressed="false" class="pillar-pill  px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                  <span class="mono text-xs opacity-60">02</span>
+                  <span>סייבר ומערכות סגורות</span>
+                </button>
+              
+                <button type="button" data-pillar="support" aria-pressed="false" class="pillar-pill  px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                  <span class="mono text-xs opacity-60">03</span>
+                  <span>מסחר ומדידה</span>
+                </button>
+              
+            </div>
+            <div class="surface-card rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="space-y-1.5 max-w-2xl">
+                <div class="flex items-center gap-2">
+                  <span class="mono text-xs text-sky-500">01</span>
+                  <h3 class="text-lg font-bold" style="color: var(--navy);">תוכנה ו-AI</h3>
+                </div>
+                <p class="text-sm leading-relaxed" style="color: var(--muted);">אפיון ובנייה של מוצרי תוכנה, מערכות CRM וסוכנים שמבצעים פעולות באישור המשתמש.</p>
+              </div>
+              <button type="button" data-go-pillar="capabilities" data-pillar-cap="software" class="shrink-0 px-4 py-2 rounded-md text-xs mono font-medium border hover:border-sky-400 transition-colors" style="border-color: var(--border);">
+                לעמוד המלא ←
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-4 hairline-t">
+            <h2 class="text-lg font-bold" style="color: var(--navy);">דברים שאני מאמין בהם</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <li class="surface-card rounded-lg p-4">בלי מצגות מיותרות.</li><li class="surface-card rounded-lg p-4">צעד לפני השוק.</li><li class="surface-card rounded-lg p-4">בודקים בשטח לפני שמרחיבים.</li><li class="surface-card rounded-lg p-4">מערכת טובה אפשר להפעיל גם אחרי שהמפתחים הולכים.</li>
+            </ul>
+          </div>
+        </section>
+      
   </main>
 
   <!-- Footer -->
@@ -1060,11 +1264,90 @@
       }
     };
 
+    const HOME_CASE = {
+      "he": {
+        "label": "תיק בדיקה",
+        "sample": "נתונים להמחשה",
+        "steps": [
+          "קליקים",
+          "פניות",
+          "שיחה ראשונה",
+          "עסקה"
+        ],
+        "finding": "86 פניות. רק ארבע שיחות.",
+        "detail": "82 פניות נשארו בלי שיחה ראשונה. כאן אני מתחיל לבדוק את המעבר למכירות.",
+        "journal": "מי בדק מה",
+        "lines": [
+          [
+            "09:00",
+            "שיווק",
+            "בדק מאיפה הגיעו הפניות."
+          ],
+          [
+            "09:20",
+            "מכירות",
+            "בדקו כמה זמן לקח לחזור ללקוחות."
+          ],
+          [
+            "09:40",
+            "CRM",
+            "בדק מי קיבל אחריות על כל פנייה."
+          ],
+          [
+            "10:00",
+            "דב",
+            "מתחילים מהעברת הפנייה לאיש המכירות."
+          ]
+        ],
+        "scroll": "איך הגענו לזה"
+      },
+      "en": {
+        "label": "Case file",
+        "sample": "Illustrative data",
+        "steps": [
+          "Clicks",
+          "Inquiries",
+          "First calls",
+          "Sale"
+        ],
+        "finding": "86 inquiries. Four calls.",
+        "detail": "82 inquiries never made it to a first call. I start by looking at the handoff to sales.",
+        "journal": "Who checked what",
+        "lines": [
+          [
+            "09:00",
+            "Marketing",
+            "Checked where inquiries came from."
+          ],
+          [
+            "09:20",
+            "Sales",
+            "Checked how long customers waited for a reply."
+          ],
+          [
+            "09:40",
+            "CRM",
+            "Checked who was assigned each inquiry."
+          ],
+          [
+            "10:00",
+            "Dov",
+            "Start with how the inquiry reaches a salesperson."
+          ]
+        ],
+        "scroll": "How we found it"
+      }
+    };
+
     function renderHome(d) {
       const h = d.home;
+      const example = HOME_CASE[STATE.lang];
+      const counts = [1240, 86, 4, 1];
+      const countFormat = new Intl.NumberFormat(STATE.lang === 'he' ? 'he-IL' : 'en-US');
       const activePillarObj = h.pillars.find(p => p.id === STATE.activePillar) || h.pillars[0];
       return `
-        <section class="space-y-14">
+        <section class="home-layout">
+          <div class="home-hero">
           <div class="home-opening">
             <p class="home-byline">${h.eyebrow}</p>
             <h1 class="home-headline">${h.headline}<br><em>${h.headlineEmphasis}</em></h1>
@@ -1074,6 +1357,34 @@
               <a href="${pageUrl('proofs', STATE.lang).search}" data-go="proofs" class="home-work">${h.ctaSecondary}</a>
             </div>
           </div>
+
+            <figure class="home-case">
+              <figcaption><strong>${example.label}</strong><span>${example.sample}</span></figcaption>
+              <ol class="home-case-flow">
+                ${counts.map((count, index) => `
+                  <li>
+                    <span>${example.steps[index]}</span>
+                    <span class="home-case-track" aria-hidden="true"><span style="--bar: ${count / counts[0] * 100}%"></span></span>
+                    <bdi>${countFormat.format(count)}</bdi>
+                  </li>
+                `).join('')}
+              </ol>
+              <div class="home-case-finding">
+                <strong>${example.finding}</strong>
+                <p>${example.detail}</p>
+              </div>
+              <a class="home-case-jump" href="#home-journal">${example.scroll}</a>
+            </figure>
+          </div>
+
+          <section id="home-journal" class="home-journal" aria-labelledby="home-journal-title">
+            <h2 id="home-journal-title">${example.journal}</h2>
+            <ol>
+              ${example.lines.map(([time, owner, note]) => `
+                <li><time datetime="${time}" dir="ltr">${time}</time><span><strong>${owner}</strong> · ${note}</span></li>
+              `).join('')}
+            </ol>
+          </section>
 
           <section class="home-method" aria-labelledby="home-method-title">
             <div>
@@ -1479,7 +1790,22 @@
       `;
     }
 
+    let homeJournalObserver;
+
+    function watchHomeJournal() {
+      homeJournalObserver?.disconnect();
+      const journal = document.getElementById('home-journal');
+      if (!journal || !window.IntersectionObserver || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      homeJournalObserver = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-revealed');
+        homeJournalObserver.disconnect();
+      }, { threshold: 0.22 });
+      homeJournalObserver.observe(journal);
+    }
+
     function bindViewEvents(d) {
+      watchHomeJournal();
       if (STATE.route === 'cyber') bindCyberShare();
 
       // Pillars on home
