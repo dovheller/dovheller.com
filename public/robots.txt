@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dovheller.com/sitemap-index.xml

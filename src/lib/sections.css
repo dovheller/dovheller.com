@@ -1,0 +1,24 @@
+@font-face{font-family:'IBM Plex Sans Hebrew';src:url('/fonts/plex-hebrew-400.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'IBM Plex Sans Hebrew';src:url('/fonts/plex-latin-400.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'IBM Plex Sans Hebrew';src:url('/fonts/plex-hebrew-500.woff2') format('woff2');font-weight:500;font-display:swap;unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'IBM Plex Sans Hebrew';src:url('/fonts/plex-latin-500.woff2') format('woff2');font-weight:500;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'IBM Plex Sans Hebrew';src:url('/fonts/plex-hebrew-600.woff2') format('woff2');font-weight:600;font-display:swap;unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'IBM Plex Sans Hebrew';src:url('/fonts/plex-latin-600.woff2') format('woff2');font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'IBM Plex Sans Hebrew';src:url('/fonts/plex-hebrew-700.woff2') format('woff2');font-weight:700;font-display:swap;unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'IBM Plex Sans Hebrew';src:url('/fonts/plex-latin-700.woff2') format('woff2');font-weight:700;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'Karantina';src:url('/fonts/karantina-hebrew-400.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Karantina';src:url('/fonts/karantina-latin-400.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F}
+@font-face{font-family:'Karantina';src:url('/fonts/karantina-hebrew-700.woff2') format('woff2');font-weight:700;font-display:swap;unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Karantina';src:url('/fonts/karantina-latin-700.woff2') format('woff2');font-weight:700;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F}
+h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-serif;font-weight:700;letter-spacing:0;line-height:1.05}
+.technical-page{max-width:780px;margin-inline:auto;color:#1a2e46;font-size:1.15rem;line-height:1.48}
+.technical-page h1{font-size:clamp(2.3rem,6vw,4.2rem);line-height:.98;font-weight:700;margin-block:0 1rem}
+.technical-page h2{font-size:1.75rem;font-weight:700;line-height:1.1;margin-block-end:12px}
+.technical-page h3{font-size:1.35rem;font-weight:700;margin-block:1.1rem .35rem}
+.technical-page p,.technical-page ul{margin-block:.55rem}
+.technical-page .entry{border-block-start:1px solid #d2dce4;padding-block:1.45rem}
+.technical-page a{text-decoration:underline;text-underline-offset:4px;color:#1a5f85}
+.technical-page code{overflow-wrap:anywhere;font-size:.88em}
+.technical-page label{display:block;margin-block:.7rem}
+.technical-page input,.technical-page textarea{display:block;width:100%;padding:.45rem .6rem;border:1px solid #a9b9c6;border-radius:.2rem}
+.technical-page button{background:#1a2e46;color:white;padding:.45rem .8rem;border-radius:.25rem}
