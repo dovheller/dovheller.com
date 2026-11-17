@@ -17,7 +17,7 @@ const app = legacyClient
   .replace(/function pageUrl\(route, language\)[\s\S]*?(?=    function renderCyberDashboard)/, configureURL + '\n\n')
   .replace(/(pageUrl\('[^']+', STATE.lang\))\.search/g, '$1.pathname');
 const server = new Function(app.split("    window.addEventListener('popstate'")[0] + `
-  return {STATE, DATA, renderHome, renderAbout, renderCyber};
+  return {STATE, DATA, renderHome, renderAbout, renderCyber, renderCapabilities, renderProofs, renderApproach, renderContact};
 `)();
 
 const client = app
@@ -28,7 +28,9 @@ const client = app
 
 `)
   .replace(/      const main = document\.getElementById\('main-content'\);[\s\S]*?(?=      bindViewEvents\(d\);)/,
-    `      if (STATE.route === 'home') document.getElementById('main-content').innerHTML = renderHome(d);
+    `      const views = {home: () => renderHome(d), about: () => renderAbout(d), capabilities: () => renderCapabilities(d),
+        cyber: () => renderCyber(), proofs: () => renderProofs(d), approach: () => renderApproach(d), contact: () => renderContact(d)};
+      if (views[STATE.route]) document.getElementById('main-content').innerHTML = views[STATE.route]();
 
 `)
   .replace(/    document\.querySelectorAll\('\[data-route\]'\)\.forEach\(btn => \{\n      btn\.addEventListener.*?\n    \}\);\n    document\.getElementById\('lang-toggle'\)[\s\S]*?(?=    document\.getElementById\('mobile-menu-btn'\))/, '')
@@ -43,8 +45,9 @@ export function createShell({language, view, title, description, body}) {
   server.STATE.lang = lang;
   server.STATE.route = route;
   const data = server.DATA[lang];
-  const fallback = {home: () => server.renderHome(data), about: () => server.renderAbout(data), cyber: () => server.renderCyber()};
-  const content = body?.trim() || fallback[route]?.() || '';
+  const fallback = {home: () => server.renderHome(data), about: () => server.renderAbout(data), cyber: () => server.renderCyber(),
+    capabilities: () => server.renderCapabilities(data), proofs: () => server.renderProofs(data), approach: () => server.renderApproach(data), contact: () => server.renderContact(data)};
+  const content = fallback[route]?.() || body?.trim() || '';
   const meta = (name, value) => '<meta ' + (name.startsWith('og:') ? 'property' : 'name') +
     '="' + name + '" content="' + escape(value) + '">';
   const og = base + '/og/' + lang + '.png';
