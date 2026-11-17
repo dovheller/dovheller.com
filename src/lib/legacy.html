@@ -552,7 +552,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           <section id="personal-worlds" class="personal-editorial" data-home-reveal aria-labelledby="personal-worlds-title">
             <h2 id="personal-worlds-title">מה אני שומע כשמישהו בא עם רעיון</h2>
             <div class="personal-grid">
-              <article><h3>ירושלים</h3><p>בירושלים גדלתי בין קהילות ולמדתי כמה חשוב להבין למי מדברים. אותה מילה יכולה לפתוח שיחה במקום אחד ולסגור אותה במקום אחר.</p></article><article class="has-photo"><img class="world-photo" src="/assets/dov-music-stage.webp" alt="דוב הלר שר על הבמה" width="900" height="1200" loading="lazy" decoding="async"><h3>מוזיקה</h3><p>בחזנות, שם קוראים לי דובל׳ה, למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא.</p></article><article><h3>יזמות וטכנולוגיה</h3><p>כשבעל עסק מספר לי מה הוא רוצה לבנות, אני מקשיב גם לאיך שהעבודה באמת מתנהלת. שם אני מגלה לא פעם מה שווה לבנות קודם.</p></article>
+              <article><h3>ירושלים</h3><p>בירושלים גדלתי בין קהילות ולמדתי כמה חשוב להבין למי מדברים. אותה מילה יכולה לפתוח שיחה במקום אחד ולסגור אותה במקום אחר.</p></article><article class="has-photo"><img class="world-photo" src="/assets/dov-shofar.webp" alt="דוב הלר שר על הבמה" width="821" height="622" loading="lazy" decoding="async"><h3>מוזיקה</h3><p>בחזנות, שם קוראים לי דובל׳ה, למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא.</p></article><article><h3>יזמות וטכנולוגיה</h3><p>כשבעל עסק מספר לי מה הוא רוצה לבנות, אני מקשיב גם לאיך שהעבודה באמת מתנהלת. שם אני מגלה לא פעם מה שווה לבנות קודם.</p></article>
             </div>
           </section>
 
@@ -1574,7 +1574,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           [
             "מוזיקה",
             "בחזנות, שם קוראים לי דובל׳ה, למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא.",
-            "/assets/dov-music-stage.webp"
+            "/assets/dov-shofar.webp"
           ],
           [
             "יזמות וטכנולוגיה",
@@ -1606,7 +1606,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           [
             "Music",
             "As a cantor, I learned to listen between phrases. Sometimes the pause tells you more than the next note.",
-            "/assets/dov-music-stage.webp"
+            "/assets/dov-shofar.webp"
           ],
           [
             "Entrepreneurship and technology",
@@ -1649,7 +1649,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           <section id="personal-worlds" class="personal-editorial" data-home-reveal aria-labelledby="personal-worlds-title">
             <h2 id="personal-worlds-title">${personal.worldTitle}</h2>
             <div class="personal-grid">
-              ${personal.worlds.map(([title, story, img]) => `<article${img ? ' class="has-photo"' : ''}>${img ? `<img class="world-photo" src="${img}" alt="${personal.name} שר על הבמה" width="900" height="1200" loading="lazy" decoding="async">` : ''}<h3>${title}</h3><p>${story}</p></article>`).join('')}
+              ${personal.worlds.map(([title, story, img]) => `<article${img ? ' class="has-photo"' : ''}>${img ? `<img class="world-photo" src="${img}" alt="${personal.name} שר על הבמה" width="821" height="622" loading="lazy" decoding="async">` : ''}<h3>${title}</h3><p>${story}</p></article>`).join('')}
             </div>
           </section>
 
@@ -1779,14 +1779,14 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           </div>
 
           <div class="two-worlds">
-            <figure class="tw-lead"><img src="/assets/dov-two-worlds.webp" width="1000" height="1000" alt="${STATE.lang==='he'?'דוב הלר, שני דיוקנאות מוקדמים':'Dov Heller, two early portraits'}" loading="lazy" decoding="async"></figure>
+            <figure class="tw-lead"><img src="/assets/dov-profile-bw.webp" width="1080" height="695" alt="${STATE.lang==='he'?'דוב הלר, דיוקן בשחור-לבן':'Dov Heller, black and white portrait'}" loading="lazy" decoding="async"><figcaption>${STATE.lang==='he'?'צילום: עזרא לנדאו':'Photo: Ezra Landau'}</figcaption></figure>
             <div class="tw-text">
               <h2>${STATE.lang==='he'?'שני עולמות, באותו זמן':'Two worlds, at the same time'}</h2>
               <p>${STATE.lang==='he'?'עד גיל 40 עמדתי לפני העמוד. כבר אז, בשנים 1997 עד 2001, ניהלתי במקביל חנות מחשבים בירושלים. בגיל 40 בחרתי עולם אחד, אבל את ההקשבה לקחתי איתי.':'Until 40, I stood before the ark as a cantor. Even then, from 1997 to 2001, I ran a computer store in Jerusalem on the side. At 40 I chose one world, but I took the listening with me.'}</p>
             </div>
             <div class="tw-strip">
-              <img src="/assets/dov-young-cantor.webp" width="640" height="640" alt="" loading="lazy" decoding="async">
-              <img src="/assets/dov-stage-band.webp" width="720" height="480" alt="" loading="lazy" decoding="async">
+              <img src="/assets/dov-childhood.webp" width="700" height="700" alt="" loading="lazy" decoding="async">
+              <img src="/assets/dov-moscow.webp" width="800" height="800" alt="" loading="lazy" decoding="async">
             </div>
           </div>
 

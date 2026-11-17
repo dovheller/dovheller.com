@@ -34,7 +34,7 @@ body:not(.cyber-mode) #main-content > section:not(.home-layout) .surface-card:ho
 .home-layout h2.text-xl,.home-layout h2.text-lg{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;color:var(--navy)}
 
 /* World cards with a photo */
-.personal-editorial article.has-photo .world-photo{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:14px;margin-bottom:1rem;filter:saturate(.9)}
+.personal-editorial article.has-photo .world-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 40%;border-radius:14px;margin-bottom:1rem;filter:saturate(.9)}
 
 /* Cyber page: keep dark cards readable */
 body.cyber-mode #main-content .surface-card{background:rgba(15,23,42,.72);border:1px solid rgba(56,189,248,.18);box-shadow:none}
@@ -45,9 +45,10 @@ body.cyber-mode #main-content .surface-card p{color:#cbd5e1}
 /* About: two worlds */
 .two-worlds{display:grid;gap:1.25rem;grid-template-columns:1fr}
 .two-worlds img{display:block;width:100%;border-radius:14px;object-fit:cover}
-.tw-lead img{aspect-ratio:1/1}
+.tw-lead img{aspect-ratio:3/2;object-position:30% center}
+.tw-lead figcaption{font-size:.72rem;color:var(--muted);margin-top:.35rem}
 .tw-text h2{font-family:'Karantina',sans-serif;font-size:2.4rem;line-height:1;color:var(--navy);margin-bottom:.5rem}
 .tw-text p{font-size:1.05rem;line-height:1.75;color:var(--ink)}
-.tw-strip{display:grid;grid-template-columns:1fr 1.5fr;gap:.75rem}
-.tw-strip img{aspect-ratio:4/3;height:100%}
+.tw-strip{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.tw-strip img{aspect-ratio:4/5;object-position:center top}
 @media(min-width:720px){.two-worlds{grid-template-columns:1fr 1fr;align-items:center}.tw-strip{grid-column:1/-1}}
