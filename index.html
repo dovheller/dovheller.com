@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>דב הלר | הלר דיגיטל – מומחים בדיגיטל, תוכנה וסוכני AI</title>
-  <meta name="description" content="דב הלר והצוות שלו מחברים שיווק, מכירות, תוכנה ומדידה. בכל תחום מומחה אנושי מוביל צוות סוכני AI, ודב מחבר את העבודה להחלטה אחת." />
+  <title>דב הלר | ירושלים, יזמות וטכנולוגיה</title>
+  <meta name="description" content="דב הלר, חזן לשעבר, יזם ומייסד הלר דיגיטל בירושלים. סיפורים אישיים, פרויקטים נבחרים ומעבדה למוצרים ולרעיונות חדשים." />
   <link rel="canonical" href="https://dovheller.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:site_name" content="HDIGITAL" />
-  <meta property="og:title" content="דב הלר · אני יודע מה לחפש" />
-  <meta property="og:description" content="איפה העסק מאבד לקוח בדרך? דב הלר וצוות מומחים שמחברים בין מה שהלקוח מספר, מה שהנתונים מראים ומה שצריך להשתנות." />
+  <meta property="og:title" content="דב הלר · לפני שבניתי אתרים" />
+  <meta property="og:description" content="מחזנות בירושלים ליזמות ולטכנולוגיה. להכיר את דב הלר דרך הסיפורים, הפרויקטים ומה שנבנה עכשיו." />
   <meta property="og:url" content="https://dovheller.com/" />
   <meta property="og:image" content="https://dovheller.com/assets/hdigital-share-brand.png" />
   <meta property="og:image:type" content="image/png" />
@@ -18,8 +18,8 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="כרטיס HDIGITAL של דב הלר עם לוגו הלר דיגיטל וקו אות בצבעי נייבי וציאן." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="דב הלר · אני יודע מה לחפש" />
-  <meta name="twitter:description" content="איפה העסק מאבד לקוח בדרך? דב הלר וצוות מומחים שמחברים בין מה שהלקוח מספר, מה שהנתונים מראים ומה שצריך להשתנות." />
+  <meta name="twitter:title" content="דב הלר · לפני שבניתי אתרים" />
+  <meta name="twitter:description" content="מחזנות בירושלים ליזמות ולטכנולוגיה. להכיר את דב הלר דרך הסיפורים, הפרויקטים ומה שנבנה עכשיו." />
   <meta name="twitter:image" content="https://dovheller.com/assets/hdigital-share-brand.png" />
   <meta name="twitter:image:alt" content="כרטיס HDIGITAL של דב הלר עם לוגו הלר דיגיטל וקו אות בצבעי נייבי וציאן." />
   <link rel="preload" href="/assets/fonts/almoni-neue-aaa-regular.otf" as="font" type="font/otf" crossorigin />
@@ -56,6 +56,7 @@
           "@id": "https://dovheller.com/#dov-heller",
           "name": "דב הלר",
           "alternateName": "Dov Heller",
+          "image": "https://dovheller.com/assets/dov-heller-portrait.webp",
           "url": "https://dovheller.com/",
           "worksFor": {
             "@id": "https://dovheller.com/#organization"
@@ -395,6 +396,80 @@
       .home-journal.is-revealed li:nth-child(4) { animation-delay: 210ms; }
       @keyframes home-arrive { from { opacity: .2; transform: translateY(8px); } to { opacity: 1; transform: none; } }
     }
+    .portrait-entrance {
+      display: grid;
+      gap: clamp(18px, 3vw, 42px);
+      align-items: center;
+      padding: clamp(20px, 5vw, 65px);
+      border-radius: clamp(18px, 4vw, 44px);
+      overflow: hidden;
+      color: #fbf4e9;
+      background: radial-gradient(ellipse at 82% 12%, #3f342c 0, transparent 63%), #211f1e;
+    }
+    .portrait-name { color: #dec5ab; font-size: 1.1rem; font-weight: 600; }
+    .portrait-copy h1 {
+      margin-block: .23em .24em;
+      max-inline-size: 14ch;
+      font-size: clamp(2.9rem, 6vw, 5.4rem);
+      line-height: .97;
+      font-weight: 700;
+      text-wrap: balance;
+    }
+    .portrait-intro { max-inline-size: 30ch; color: #e4d8cb; font-size: clamp(1.17rem, 2.5vw, 1.48rem); line-height: 1.31; }
+    .portrait-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 560px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 29%;
+      border-radius: clamp(13px, 2.8vw, 27px);
+    }
+    .portrait-entrance a, .personal-end a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+    .portrait-entrance a { color: #f0d2aa; margin-block-start: 5px; }
+    .personal-editorial { color: #26211c; scroll-margin-block-start: 95px; }
+    .personal-editorial h2, .personal-end h2 {
+      font-size: clamp(2.15rem, 5vw, 3.7rem);
+      line-height: 1.02;
+      font-weight: 700;
+      text-wrap: balance;
+    }
+    .personal-grid { display: grid; gap: 12px clamp(18px, 4vw, 45px); margin-block-start: 20px; }
+    .personal-grid article { padding-block: 13px; border-block-start: 1px solid #d7cbbc; }
+    .personal-grid h3 { color: #403025; font-size: 1.31rem; font-weight: 700; line-height: 1.15; }
+    .personal-editorial p, .personal-end p { font-size: 1.12rem; line-height: 1.38; }
+    .personal-grid p, .personal-editorial > p { color: #534942; margin-block-start: 6px; }
+    .personal-projects .personal-grid { margin-block-start: 13px; }
+    .personal-stage { display: inline-block; margin-block-end: 7px; color: #69523d; font-weight: 700; }
+    .personal-link { display: inline-block; margin-block-start: 10px; color: #785033; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+    .personal-lab { border-radius: clamp(17px, 3vw, 32px); background: #f0e8de; padding: clamp(19px, 5vw, 52px); }
+    .personal-lab h2 { margin-block-start: 7px; }
+    .personal-end {
+      border-radius: clamp(17px, 3vw, 32px);
+      color: #fbf4ea;
+      background: #29221e;
+      padding: clamp(20px, 5vw, 55px);
+    }
+    .personal-end a { color: #f0d2aa; }
+    @media (min-width: 800px) {
+      .portrait-entrance { grid-template-columns: 1fr .9fr; }
+      .personal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .personal-projects .personal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px) {
+      .portrait-photo { max-height: 420px; object-position: center 20%; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .personal-editorial.is-revealed { animation: home-arrive .56s cubic-bezier(.2,.7,.2,1) both; }
+    }
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; animation: none !important; }
     }
@@ -454,10 +529,27 @@
   <!-- Main Content -->
   <main id="main-content" class="flex-1 max-w-5xl w-full mx-auto px-5 py-10 md:py-14">
         <section class="home-layout">
+          <section class="portrait-entrance" aria-labelledby="personal-headline">
+            <div class="portrait-copy">
+              <p class="portrait-name">דב הלר</p>
+              <h1 id="personal-headline">לפני שבניתי אתרים, עמדתי לפני העמוד.</h1>
+              <p class="portrait-intro">הייתי חזן בירושלים. גם היום, כשמישהו בא אליי עם רעיון, אני קודם מקשיב.</p>
+              <a href="#personal-worlds">להמשיך לסיפור</a>
+            </div>
+            <img class="portrait-photo" src="/assets/dov-heller-portrait.webp" width="1000" height="1250" fetchpriority="high" alt="דב הלר">
+          </section>
+
+          <section id="personal-worlds" class="personal-editorial" data-home-reveal aria-labelledby="personal-worlds-title">
+            <h2 id="personal-worlds-title">מה אני שומע כשמישהו בא עם רעיון</h2>
+            <div class="personal-grid">
+              <article><h3>ירושלים</h3><p>בירושלים גדלתי בין קהילות ולמדתי כמה חשוב להבין למי מדברים. אותה מילה יכולה לפתוח שיחה במקום אחד ולסגור אותה במקום אחר.</p></article><article><h3>מוזיקה</h3><p>בחזנות למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא.</p></article><article><h3>יזמות וטכנולוגיה</h3><p>כשבעל עסק מספר לי מה הוא רוצה לבנות, אני מקשיב גם לאיך שהעבודה באמת מתנהלת. שם אני מגלה לא פעם מה שווה לבנות קודם.</p></article>
+            </div>
+          </section>
+
           <div class="home-hero">
           <div class="home-opening">
             <p class="home-byline">דב הלר, מייסד הלר דיגיטל</p>
-            <h1 class="home-headline">אני יודע<br><em>מה לחפש.</em></h1>
+            <h2 class="home-headline">אני יודע<br><em>מה לחפש.</em></h2>
             <p class="home-intro">איפה הלקוח מתעכב? מה קורה לפנייה אחרי שהיא נכנסת? כשמכירים את העבודה בשיווק, במכירות ובתוכנה, יודעים גם איפה להסתכל קודם.</p>
             <div class="home-actions">
               <a href="?view=contact" data-go="contact" class="home-contact">נדבר על העסק שלך</a>
@@ -527,6 +619,34 @@
             </ol>
           </section>
 
+          <section class="personal-editorial personal-projects" data-home-reveal aria-labelledby="personal-work-title">
+            <h2 id="personal-work-title">פרויקטים של הלר דיגיטל</h2>
+            <p>בחרתי שני פרויקטים שמראים איך שאלה אנושית הופכת להחלטה במוצר.</p>
+            <div class="personal-grid">
+              
+                <article>
+                  <span class="personal-stage">הכנה לפיילוט</span>
+                  <h3>אפיון מקצה לקצה לקהילה סגורה</h3>
+                  <p>חומרה, CRM עם הרשאות מרובות רמות ו-UX לטאבלט סגור.</p>
+                </article>
+              
+                <article>
+                  <span class="personal-stage">דמו</span>
+                  <h3>CRM וסוכנת AI לתיווך יוקרה</h3>
+                  <p>מערכת CRM עם סוכנת AI בעברית שמבצעת פעולות באישור המשתמש.</p>
+                </article>
+              
+            </div>
+            <a class="personal-link" href="?view=proofs" data-go="proofs">לכל הפרויקטים</a>
+          </section>
+
+          <section class="personal-editorial personal-lab" data-home-reveal aria-labelledby="personal-lab-title">
+            <p class="personal-stage">במעבדה</p>
+            <h2 id="personal-lab-title">מה אפשר לבנות מביקור אחד במסעדה?</h2>
+            <p>בהלר דיגיטל 360 אנחנו בודקים איך תיעוד מהשטח יכול להפוך לדף עסק שאפשר לעבור עליו עם בעל המסעדה עוד באותו ביקור.</p>
+            <a class="personal-link" href="https://360.dovheller.com/">להכיר את הלר דיגיטל 360</a>
+          </section>
+
           <!-- Engine Room / Interactive 3 Pillars -->
           <div class="space-y-5 pt-4 hairline-t">
             <div class="flex items-center justify-between">
@@ -573,6 +693,10 @@
               <li class="surface-card rounded-lg p-4">בלי מצגות מיותרות.</li><li class="surface-card rounded-lg p-4">צעד לפני השוק.</li><li class="surface-card rounded-lg p-4">בודקים בשטח לפני שמרחיבים.</li><li class="surface-card rounded-lg p-4">מערכת טובה אפשר להפעיל גם אחרי שהמפתחים הולכים.</li>
             </ul>
           </div>
+          <section class="personal-end" aria-labelledby="personal-contact-title">
+            <h2 id="personal-contact-title">יש לך רעיון שלא נותן לך לישון?</h2>
+            <a href="?view=contact" data-go="contact">אולי כדאי שנדבר</a>
+          </section>
         </section>
       
   </main>
@@ -1339,18 +1463,100 @@
       }
     };
 
+    const PERSONAL_HOME = {
+      "he": {
+        "name": "דב הלר",
+        "headline": "לפני שבניתי אתרים, עמדתי לפני העמוד.",
+        "intro": "הייתי חזן בירושלים. גם היום, כשמישהו בא אליי עם רעיון, אני קודם מקשיב.",
+        "explore": "להמשיך לסיפור",
+        "worldTitle": "מה אני שומע כשמישהו בא עם רעיון",
+        "worlds": [
+          [
+            "ירושלים",
+            "בירושלים גדלתי בין קהילות ולמדתי כמה חשוב להבין למי מדברים. אותה מילה יכולה לפתוח שיחה במקום אחד ולסגור אותה במקום אחר."
+          ],
+          [
+            "מוזיקה",
+            "בחזנות למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא."
+          ],
+          [
+            "יזמות וטכנולוגיה",
+            "כשבעל עסק מספר לי מה הוא רוצה לבנות, אני מקשיב גם לאיך שהעבודה באמת מתנהלת. שם אני מגלה לא פעם מה שווה לבנות קודם."
+          ]
+        ],
+        "work": "פרויקטים של הלר דיגיטל",
+        "projects": "בחרתי שני פרויקטים שמראים איך שאלה אנושית הופכת להחלטה במוצר.",
+        "proofLink": "לכל הפרויקטים",
+        "lab": "במעבדה",
+        "labHeadline": "מה אפשר לבנות מביקור אחד במסעדה?",
+        "labText": "בהלר דיגיטל 360 אנחנו בודקים איך תיעוד מהשטח יכול להפוך לדף עסק שאפשר לעבור עליו עם בעל המסעדה עוד באותו ביקור.",
+        "labLink": "להכיר את הלר דיגיטל 360",
+        "contact": "יש לך רעיון שלא נותן לך לישון?",
+        "contactLink": "אולי כדאי שנדבר"
+      },
+      "en": {
+        "name": "Dov Heller",
+        "headline": "Before I built websites, I led prayers.",
+        "intro": "I was a cantor in Jerusalem. When someone brings me an idea today, I still start by listening.",
+        "explore": "Explore the story",
+        "worldTitle": "What I listen for when someone brings me an idea",
+        "worlds": [
+          [
+            "Jerusalem",
+            "I grew up among different communities in Jerusalem. I learned to pay attention to who’s listening. A word that opens a conversation in one room may close it in another."
+          ],
+          [
+            "Music",
+            "As a cantor, I learned to listen between phrases. Sometimes the pause tells you more than the next note."
+          ],
+          [
+            "Entrepreneurship and technology",
+            "When a business owner tells me what they want to build, I listen for how the work actually gets done. That’s often where I find what’s worth building first."
+          ]
+        ],
+        "work": "Selected work from HDIGITAL",
+        "projects": "Two projects where a question about people shaped a product decision.",
+        "proofLink": "See all projects",
+        "lab": "In the lab",
+        "labHeadline": "What can you build from one restaurant visit?",
+        "labText": "At Heller Digital 360, we’re exploring how material collected on site can become a business page we can review with the owner during the same visit.",
+        "labLink": "Explore Heller Digital 360",
+        "contact": "Got an idea that keeps you up at night?",
+        "contactLink": "Let’s talk"
+      }
+    };
+
     function renderHome(d) {
       const h = d.home;
+      const personal = PERSONAL_HOME[STATE.lang];
+      const selectedProjects = d.proofs.items.slice(0, 2);
       const example = HOME_CASE[STATE.lang];
       const counts = [1240, 86, 4, 1];
       const countFormat = new Intl.NumberFormat(STATE.lang === 'he' ? 'he-IL' : 'en-US');
       const activePillarObj = h.pillars.find(p => p.id === STATE.activePillar) || h.pillars[0];
       return `
         <section class="home-layout">
+          <section class="portrait-entrance" aria-labelledby="personal-headline">
+            <div class="portrait-copy">
+              <p class="portrait-name">${personal.name}</p>
+              <h1 id="personal-headline">${personal.headline}</h1>
+              <p class="portrait-intro">${personal.intro}</p>
+              <a href="#personal-worlds">${personal.explore}</a>
+            </div>
+            <img class="portrait-photo" src="/assets/dov-heller-portrait.webp" width="1000" height="1250" fetchpriority="high" alt="${personal.name}">
+          </section>
+
+          <section id="personal-worlds" class="personal-editorial" data-home-reveal aria-labelledby="personal-worlds-title">
+            <h2 id="personal-worlds-title">${personal.worldTitle}</h2>
+            <div class="personal-grid">
+              ${personal.worlds.map(([title, story]) => `<article><h3>${title}</h3><p>${story}</p></article>`).join('')}
+            </div>
+          </section>
+
           <div class="home-hero">
           <div class="home-opening">
             <p class="home-byline">${h.eyebrow}</p>
-            <h1 class="home-headline">${h.headline}<br><em>${h.headlineEmphasis}</em></h1>
+            <h2 class="home-headline">${h.headline}<br><em>${h.headlineEmphasis}</em></h2>
             <p class="home-intro">${h.subhead}</p>
             <div class="home-actions">
               <a href="${pageUrl('contact', STATE.lang).search}" data-go="contact" class="home-contact">${h.ctaPrimary}</a>
@@ -1396,6 +1602,28 @@
             </ol>
           </section>
 
+          <section class="personal-editorial personal-projects" data-home-reveal aria-labelledby="personal-work-title">
+            <h2 id="personal-work-title">${personal.work}</h2>
+            <p>${personal.projects}</p>
+            <div class="personal-grid">
+              ${selectedProjects.map(project => `
+                <article>
+                  <span class="personal-stage">${project.stage}</span>
+                  <h3>${project.title}</h3>
+                  <p>${project.summary}</p>
+                </article>
+              `).join('')}
+            </div>
+            <a class="personal-link" href="${pageUrl('proofs', STATE.lang).search}" data-go="proofs">${personal.proofLink}</a>
+          </section>
+
+          <section class="personal-editorial personal-lab" data-home-reveal aria-labelledby="personal-lab-title">
+            <p class="personal-stage">${personal.lab}</p>
+            <h2 id="personal-lab-title">${personal.labHeadline}</h2>
+            <p>${personal.labText}</p>
+            <a class="personal-link" href="https://360.dovheller.com/">${personal.labLink}</a>
+          </section>
+
           <!-- Engine Room / Interactive 3 Pillars -->
           <div class="space-y-5 pt-4 hairline-t">
             <div class="flex items-center justify-between">
@@ -1430,6 +1658,10 @@
               ${h.beliefs.map(belief => `<li class="surface-card rounded-lg p-4">${belief}</li>`).join('')}
             </ul>
           </div>
+          <section class="personal-end" aria-labelledby="personal-contact-title">
+            <h2 id="personal-contact-title">${personal.contact}</h2>
+            <a href="${pageUrl('contact', STATE.lang).search}" data-go="contact">${personal.contactLink}</a>
+          </section>
         </section>
       `;
     }
@@ -1790,22 +2022,23 @@
       `;
     }
 
-    let homeJournalObserver;
+    let homeRevealObserver;
 
-    function watchHomeJournal() {
-      homeJournalObserver?.disconnect();
-      const journal = document.getElementById('home-journal');
-      if (!journal || !window.IntersectionObserver || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      homeJournalObserver = new IntersectionObserver(([entry]) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-revealed');
-        homeJournalObserver.disconnect();
-      }, { threshold: 0.22 });
-      homeJournalObserver.observe(journal);
+    function watchHomeSections() {
+      homeRevealObserver?.disconnect();
+      if (STATE.route !== 'home' || !window.IntersectionObserver || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      homeRevealObserver = new IntersectionObserver((entries, observer) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      }, { threshold: 0.2 });
+      document.querySelectorAll('#home-journal, [data-home-reveal]').forEach(section => homeRevealObserver.observe(section));
     }
 
     function bindViewEvents(d) {
-      watchHomeJournal();
+      watchHomeSections();
       if (STATE.route === 'cyber') bindCyberShare();
 
       // Pillars on home
