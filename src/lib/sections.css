@@ -52,3 +52,6 @@ body.cyber-mode #main-content .surface-card p{color:#cbd5e1}
 .tw-strip{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 .tw-strip img{aspect-ratio:4/5;object-position:center top}
 @media(min-width:720px){.two-worlds{grid-template-columns:1fr 1fr;align-items:center}.tw-strip{grid-column:1/-1}}
+.tw-moments{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.tw-moments img{aspect-ratio:3/4;object-position:center 20%}
+@media(min-width:720px){.tw-moments{grid-column:1/-1}}
