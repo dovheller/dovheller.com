@@ -1778,6 +1778,18 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
             <p class="text-base font-medium" style="color: var(--muted);">${a.lead}</p>
           </div>
 
+          <div class="two-worlds">
+            <figure class="tw-lead"><img src="/assets/dov-two-worlds.webp" width="1000" height="1000" alt="${STATE.lang==='he'?'דוב הלר, שני דיוקנאות מוקדמים':'Dov Heller, two early portraits'}" loading="lazy" decoding="async"></figure>
+            <div class="tw-text">
+              <h2>${STATE.lang==='he'?'שני עולמות, באותו זמן':'Two worlds, at the same time'}</h2>
+              <p>${STATE.lang==='he'?'עד גיל 40 עמדתי לפני העמוד. כבר אז, בשנים 1997 עד 2001, ניהלתי במקביל חנות מחשבים בירושלים. בגיל 40 בחרתי עולם אחד, אבל את ההקשבה לקחתי איתי.':'Until 40, I stood before the ark as a cantor. Even then, from 1997 to 2001, I ran a computer store in Jerusalem on the side. At 40 I chose one world, but I took the listening with me.'}</p>
+            </div>
+            <div class="tw-strip">
+              <img src="/assets/dov-young-cantor.webp" width="640" height="640" alt="" loading="lazy" decoding="async">
+              <img src="/assets/dov-stage-band.webp" width="720" height="480" alt="" loading="lazy" decoding="async">
+            </div>
+          </div>
+
           <div class="surface-card rounded-xl p-6 sm:p-8 space-y-4">
             <h2 class="text-xs mono uppercase tracking-widest" style="color: var(--muted);">${a.storyTitle}</h2>
             ${a.story.map(p => `<p class="text-base leading-relaxed" style="color: var(--ink);">${p}</p>`).join('')}
