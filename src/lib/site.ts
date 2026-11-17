@@ -12,6 +12,6 @@ export const site = {
 };
 
 export const labels = {
-  he: { home: 'ראשי', about: 'דב הלר', capabilities: 'יכולות', cyber: 'סייבר', proofs: 'הוכחות', approach: 'דרך עבודה', contact: 'קשר' },
+  he: { home: 'ראשי', about: 'דוב הלר', capabilities: 'יכולות', cyber: 'סייבר', proofs: 'הוכחות', approach: 'דרך עבודה', contact: 'קשר' },
   en: { home: 'Home', about: 'Dov Heller', capabilities: 'Capabilities', cyber: 'Cyber', proofs: 'Selected work', approach: 'Approach', contact: 'Contact' }
 } satisfies Record<Language, Record<View, string>>;

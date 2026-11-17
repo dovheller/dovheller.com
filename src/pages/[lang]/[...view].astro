@@ -20,11 +20,11 @@ const entries = isContent ? (await getCollection(collection, ({data}) => data.la
   .sort((a,b) => a.data.order - b.data.order) : [];
 const rendered = await Promise.all(entries.map(async entry => ({...entry, ...(await entry.render()) })));
 const summary = {
-  he: { home: 'דב הלר, חזן לשעבר, יזם ומייסד הלר דיגיטל בירושלים.', about: 'דב הלר, מייסד הלר דיגיטל ויזם מירושלים.', capabilities: 'פיתוח תוכנה ו־Android, הגנת מערכות, אנליטיקה וליווי.', cyber: 'תמונת מצב של סיכוני סייבר בישראל ותרחישים מעשיים לעסקים.', proofs: 'שלושה פרויקטים בתחומי איסוף נתוני שטח, מסחר והנדסת מוצר.', approach: 'אפיון, פיילוט, הפעלה ומסירה.', contact: 'יצירת קשר עם הלר דיגיטל.' },
+  he: { home: 'דוב הלר, חזן לשעבר, יזם ומייסד הלר דיגיטל בירושלים.', about: 'דוב הלר, מייסד הלר דיגיטל ויזם מירושלים.', capabilities: 'פיתוח תוכנה ו־Android, הגנת מערכות, אנליטיקה וליווי.', cyber: 'תמונת מצב של סיכוני סייבר בישראל ותרחישים מעשיים לעסקים.', proofs: 'שלושה פרויקטים בתחומי איסוף נתוני שטח, מסחר והנדסת מוצר.', approach: 'אפיון, פיילוט, הפעלה ומסירה.', contact: 'יצירת קשר עם הלר דיגיטל.' },
   en: { home: 'Dov Heller, former cantor, entrepreneur and founder of HDIGITAL in Jerusalem.', about: 'Dov Heller, Jerusalem entrepreneur and founder of HDIGITAL.', capabilities: 'Software and Android development, cybersecurity and analytics.', cyber: 'Cyber risk in Israel and practical scenarios for businesses.', proofs: 'Three projects in field data collection, commerce and product engineering.', approach: 'Specification, pilot, rollout and handover.', contact: 'Contact HDIGITAL.' }
 };
 ---
-<Shell {language} {view} title={view === 'home' ? (he ? 'דב הלר · ירושלים, יזמות וטכנולוגיה' : 'Dov Heller · Jerusalem, business, and technology') : `${title} · HDIGITAL`} description={summary[language][view]}>
+<Shell {language} {view} title={view === 'home' ? (he ? 'דוב הלר · ירושלים, יזמות וטכנולוגיה' : 'Dov Heller · Jerusalem, business, and technology') : `${title} · HDIGITAL`} description={summary[language][view]}>
   {isContent && <div class="technical-page">
     <h1>{title}</h1>
     {rendered.map(({data, Content}) => <article class="entry">
