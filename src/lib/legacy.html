@@ -1979,9 +1979,12 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
             <p class="text-sm text-slate-300 leading-relaxed">${cd.partnersBody}</p>
           </div>
 
-          <div class="surface-card rounded-xl p-6 space-y-2 max-w-3xl">
-            <h3 class="mono text-xs uppercase tracking-widest text-slate-400">${cd.fieldTitle}</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">${cd.fieldBody}</p>
+          <div class="surface-card rounded-xl overflow-hidden max-w-3xl cyber-field">
+            <img src="/assets/dov-flight.webp" width="976" height="1000" alt="" loading="lazy" decoding="async">
+            <div class="p-6 space-y-2">
+              <h3 class="mono text-xs uppercase tracking-widest text-slate-400">${cd.fieldTitle}</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">${cd.fieldBody}</p>
+            </div>
           </div>
         </section>
       `;
@@ -2060,6 +2063,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
             <h1 class="text-3xl sm:text-4xl font-bold" style="color: var(--navy);">${ap.title}</h1>
             <p class="text-base" style="color: var(--muted);">${ap.lead}</p>
           </div>
+          <img class="approach-photo" src="/assets/dov-event.webp" width="600" height="643" alt="" loading="lazy" decoding="async">
 
           <div class="space-y-4">
             ${ap.steps.map(s => `
