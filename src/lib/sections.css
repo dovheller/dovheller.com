@@ -41,3 +41,13 @@ body.cyber-mode #main-content .surface-card{background:rgba(15,23,42,.72);border
 body.cyber-mode #main-content .surface-card:hover{border-color:rgba(56,189,248,.5)}
 body.cyber-mode #main-content .surface-card h3{color:#f1f5f9}
 body.cyber-mode #main-content .surface-card p{color:#cbd5e1}
+
+/* About: two worlds */
+.two-worlds{display:grid;gap:1.25rem;grid-template-columns:1fr}
+.two-worlds img{display:block;width:100%;border-radius:14px;object-fit:cover}
+.tw-lead img{aspect-ratio:1/1}
+.tw-text h2{font-family:'Karantina',sans-serif;font-size:2.4rem;line-height:1;color:var(--navy);margin-bottom:.5rem}
+.tw-text p{font-size:1.05rem;line-height:1.75;color:var(--ink)}
+.tw-strip{display:grid;grid-template-columns:1fr 1.5fr;gap:.75rem}
+.tw-strip img{aspect-ratio:4/3;height:100%}
+@media(min-width:720px){.two-worlds{grid-template-columns:1fr 1fr;align-items:center}.tw-strip{grid-column:1/-1}}
