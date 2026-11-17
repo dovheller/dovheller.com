@@ -1,0 +1,10 @@
+---
+import { createShell } from '../lib/shell.mjs';
+import type { Language, View } from '../lib/site';
+
+interface Props { language: Language; view: View; title: string; description: string }
+const props = Astro.props;
+const body = await Astro.slots.render('default');
+const html = createShell({ ...props, body });
+---
+<Fragment set:html={html} />

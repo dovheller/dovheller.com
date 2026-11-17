@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>דב הלר · HDIGITAL</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://dovheller.com/he">
+  <script is:inline>
+    const params = new URLSearchParams(location.search);
+    const language = params.get('lang') === 'en' ? 'en' : 'he';
+    const route = params.get('view');
+    const routes = ['about', 'capabilities', 'cyber', 'proofs', 'approach', 'contact'];
+    location.replace('/' + language + (routes.includes(route) ? '/' + route : '') + location.hash);
+  </script>
+  <noscript><meta http-equiv="refresh" content="0;url=/he"></noscript>
+</head>
+<body><a href="/he">האתר בעברית</a> · <a href="/en">English</a></body>
+</html>

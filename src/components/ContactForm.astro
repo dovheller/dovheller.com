@@ -1,0 +1,16 @@
+---
+import { site, type Language } from '../lib/site';
+
+interface Props { language: Language }
+const he = Astro.props.language === 'he';
+---
+{site.contactEndpoint && (
+  <form action={site.contactEndpoint} method="post">
+    <label>{he ? 'שם' : 'Name'}<input name="name" autocomplete="name" required></label>
+    <label>{he ? 'דוא״ל' : 'Email'}<input type="email" name="email" autocomplete="email" required></label>
+    <label>{he ? 'הודעה' : 'Message'}<textarea name="message" rows="5" required></textarea></label>
+    <button type="submit">{he ? 'שליחה' : 'Send'}</button>
+  </form>
+)}
+<p><a href={`mailto:${site.email}`} dir="ltr">{site.email}</a></p>
+{site.whatsapp && <p><a href={site.whatsapp}>{he ? 'וואטסאפ' : 'WhatsApp'}</a></p>}
