@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>דב הלר | HDIGITAL – פיתוח תוכנה, מערכות CRM וסוכני AI</title>
-  <meta name="description" content="דב הלר, מייסד HDIGITAL, מתכנן ובונה מערכות תוכנה ו־CRM, סוכני AI ותשתיות לעבודה עם מידע רגיש, לעסקים בארץ ובחו״ל." />
+  <title>דב הלר | הלר דיגיטל – מומחים בדיגיטל, תוכנה וסוכני AI</title>
+  <meta name="description" content="דב הלר והצוות שלו מחברים שיווק, מכירות, תוכנה ומדידה. בכל תחום מומחה אנושי מוביל צוות סוכני AI, ודב מחבר את העבודה להחלטה אחת." />
   <link rel="canonical" href="https://dovheller.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:site_name" content="HDIGITAL" />
-  <meta property="og:title" content="דב הלר · המערכת הבאה שלך מתחילה כאן" />
-  <meta property="og:description" content="יש תהליך שמסורבל מדי בשביל עוד גיליון? ב־HDIGITAL בונים לו מערכת: תוכנה, CRM וסוכני AI שעושים עבודה אמיתית." />
+  <meta property="og:title" content="דב הלר · אני יודע מה לחפש" />
+  <meta property="og:description" content="איפה העסק מאבד לקוח בדרך? דב הלר וצוות מומחים שמחברים בין מה שהלקוח מספר, מה שהנתונים מראים ומה שצריך להשתנות." />
   <meta property="og:url" content="https://dovheller.com/" />
   <meta property="og:image" content="https://dovheller.com/assets/hdigital-share-brand.png" />
   <meta property="og:image:type" content="image/png" />
@@ -18,8 +18,8 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="כרטיס HDIGITAL של דב הלר עם לוגו הלר דיגיטל וקו אות בצבעי נייבי וציאן." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="דב הלר · המערכת הבאה שלך מתחילה כאן" />
-  <meta name="twitter:description" content="יש תהליך שמסורבל מדי בשביל עוד גיליון? ב־HDIGITAL בונים לו מערכת: תוכנה, CRM וסוכני AI שעושים עבודה אמיתית." />
+  <meta name="twitter:title" content="דב הלר · אני יודע מה לחפש" />
+  <meta name="twitter:description" content="איפה העסק מאבד לקוח בדרך? דב הלר וצוות מומחים שמחברים בין מה שהלקוח מספר, מה שהנתונים מראים ומה שצריך להשתנות." />
   <meta name="twitter:image" content="https://dovheller.com/assets/hdigital-share-brand.png" />
   <meta name="twitter:image:alt" content="כרטיס HDIGITAL של דב הלר עם לוגו הלר דיגיטל וקו אות בצבעי נייבי וציאן." />
   <link rel="preload" href="/assets/fonts/almoni-neue-aaa-regular.otf" as="font" type="font/otf" crossorigin />
@@ -179,6 +179,89 @@
       border-color: var(--signal);
       background: rgba(39, 177, 252, 0.08);
     }
+    .home-opening {
+      color: var(--navy);
+      padding-block: clamp(16px, 3vw, 36px) clamp(4px, 1vw, 12px);
+    }
+    .home-byline {
+      border-inline-start: 3px solid var(--signal);
+      padding-inline-start: 11px;
+      font-size: 1.08rem;
+      font-weight: 600;
+    }
+    .home-headline {
+      margin-block: 0.24em 0.25em;
+      font-size: clamp(3.4rem, 10vw, 7.4rem);
+      line-height: 0.89;
+      font-weight: 700;
+    }
+    .home-headline em {
+      color: #1a6487;
+      font-style: normal;
+    }
+    .home-intro {
+      max-inline-size: 33em;
+      font-size: clamp(1.25rem, 2.6vw, 1.62rem);
+      line-height: 1.34;
+      color: #33465b;
+    }
+    .home-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 18px;
+      margin-block-start: 1.25rem;
+    }
+    .home-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-block-size: 44px;
+      font-size: 1.06rem;
+      font-weight: 600;
+    }
+    .home-contact {
+      border-radius: 4px;
+      background: #1a2e46;
+      color: white;
+      padding-inline: 16px;
+    }
+    .home-work {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    .home-method {
+      display: grid;
+      gap: 22px;
+      padding-block: clamp(20px, 4vw, 36px);
+      border-block: 1px solid var(--border);
+    }
+    .home-method h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1;
+      margin-block-end: 12px;
+    }
+    .home-method p {
+      color: #33465b;
+      font-size: 1.14rem;
+      line-height: 1.36;
+    }
+    .home-method-list {
+      display: grid;
+      gap: 14px;
+      border-inline-start: 2px solid #86cbea;
+      padding-inline-start: 14px;
+      list-style: none;
+    }
+    .home-method-list h3 {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    @media (min-width: 800px) {
+      .home-method { grid-template-columns: 0.85fr 1fr; gap: clamp(30px, 6vw, 66px); }
+    }
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; animation: none !important; }
     }
@@ -194,13 +277,13 @@
     <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <button id="brand-home-btn" type="button" class="flex items-center gap-3 text-start focus:outline-none focus-visible:ring-2 focus-visible:ring-signal rounded" aria-label="דב הלר — דף הבית">
-          <img src="assets/hdigital-logo-opaque.png" alt="HDIGITAL" class="h-8 w-auto object-contain rounded-sm" />
+          <img src="assets/hdigital-logo-opaque.png" alt="HDIGITAL" width="306" height="162" class="h-10 w-auto object-contain rounded-sm" />
           <span class="hidden sm:inline-block h-4 w-px bg-slate-300 dark:bg-slate-700"></span>
           <span id="brand-sub" class="hidden sm:inline-block text-xs mono tracking-wider uppercase" style="color: var(--muted);">DOV HELLER</span>
         </button>
       </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium" aria-label="ניווט ראשי">
+      <nav class="hidden lg:flex items-center gap-5 text-sm font-medium" aria-label="ניווט ראשי">
         <button type="button" data-route="home" class="nav-link active py-1">ראשי</button>
         <button type="button" data-route="about" class="nav-link py-1">דב הלר</button>
         <button type="button" data-route="capabilities" class="nav-link py-1">יכולות</button>
@@ -217,14 +300,14 @@
         <button id="lang-toggle" type="button" class="px-2.5 py-1 text-xs mono font-medium rounded border transition-colors" style="border-color: var(--border); color: var(--ink);">
           EN
         </button>
-        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded border" style="border-color: var(--border); color: var(--ink);" aria-label="פתח תפריט" aria-expanded="false">
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded border" style="border-color: var(--border); color: var(--ink);" aria-label="פתח תפריט" aria-expanded="false">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav -->
-    <div id="mobile-nav" class="hidden md:hidden hairline-t px-5 py-3 flex flex-wrap gap-3 text-sm" style="background-color: var(--surface);">
+    <div id="mobile-nav" class="hidden lg:hidden hairline-t px-5 py-3 flex flex-wrap gap-3 text-sm" style="background-color: var(--surface);">
       <button type="button" data-route="home" class="mobile-nav-link px-2 py-1 rounded">ראשי</button>
       <button type="button" data-route="about" class="mobile-nav-link px-2 py-1 rounded">דב הלר</button>
       <button type="button" data-route="capabilities" class="mobile-nav-link px-2 py-1 rounded">יכולות</button>
@@ -237,11 +320,25 @@
 
   <!-- Main Content -->
   <main id="main-content" class="flex-1 max-w-5xl w-full mx-auto px-5 py-10 md:py-14">
-    <section class="max-w-3xl space-y-5 pt-2">
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-tight" style="color: var(--navy);">מי שמכיר, מכיר.</h1>
-      <p class="text-lg sm:text-xl leading-relaxed font-normal" style="color: var(--muted);">אני דב הלר, מייסד HDIGITAL. אני מתכנן ובונה מוצרי תוכנה לשווקים בארץ ובחו״ל, מערכות CRM, סוכני AI ותשתיות לעבודה עם מידע רגיש.</p>
-      <noscript><a href="mailto:contact@dovheller.com">קשר ישיר</a></noscript>
-    </section>
+    <div class="home-opening">
+            <p class="home-byline">דב הלר, מייסד הלר דיגיטל</p>
+            <h1 class="home-headline">אני יודע<br><em>מה לחפש.</em></h1>
+            <p class="home-intro">איפה הלקוח מתעכב? מה קורה לפנייה אחרי שהיא נכנסת? כשמכירים את העבודה בשיווק, במכירות ובתוכנה, יודעים גם איפה להסתכל קודם.</p>
+            <div class="home-actions">
+              <a href="?view=contact" data-go="contact" class="home-contact">נדבר על העסק שלך</a>
+              <a href="?view=proofs" data-go="proofs" class="home-work">מה כבר בנינו</a>
+            </div>
+          </div>
+
+          <section class="home-method" aria-labelledby="home-method-title">
+            <div>
+              <h2 id="home-method-title">לכל תחום יש עין משלו.</h2>
+              <p>אצלנו בכל תחום ליבה יש מומחה אנושי. הוא מכיר את העבודה מבפנים ומפעיל חדר סוכני AI משלו. אני מחבר את מה שהם רואים לתמונה של העסק כולו.</p>
+            </div>
+            <ol class="home-method-list">
+              <li><h3>המומחה מנסח את השאלה</h3><p>הוא יודע מה לחפש בתחום שלו ומה צריך לבדוק לפני שמחליטים.</p></li><li><h3>הסוכנים בודקים ומתעדים</h3><p>כל צוות בודק את מה שהוגדר לו. יומן העבודה מסתנכרן איתי במרווחים קבועים, עם הממצאים והשאלות הפתוחות.</p></li><li><h3>אני מחבר בין התחומים</h3><p>כשקמפיין מביא פניות ואף אחת לא הופכת לשיחה, אני בודק מה קורה במעבר למכירות. לפעמים זה הדבר הראשון שצריך לתקן כדי להקדים את המתחרים.</p></li>
+            </ol>
+          </section>
   </main>
 
   <!-- Footer -->
@@ -395,12 +492,20 @@
           decline: 'דחייה'
         },
         home: {
-          eyebrow: 'DOV HELLER · PRODUCT & INFRASTRUCTURE ARCHITECT',
-          headline: 'מי שמכיר, מכיר.',
-          subhead: 'אני דב הלר, מייסד HDIGITAL. אני מתכנן ובונה מוצרי תוכנה לשווקים בארץ ובחו״ל, מערכות CRM, סוכני AI ותשתיות לעבודה עם מידע רגיש.',
-          ctaPrimary: 'הוכחות יכולת',
-          ctaSecondary: 'קשר ישיר',
-          pillarsTitle: 'חדר המכונות',
+          eyebrow: 'דב הלר, מייסד הלר דיגיטל',
+          headline: 'אני יודע',
+          headlineEmphasis: 'מה לחפש.',
+          subhead: 'איפה הלקוח מתעכב? מה קורה לפנייה אחרי שהיא נכנסת? כשמכירים את העבודה בשיווק, במכירות ובתוכנה, יודעים גם איפה להסתכל קודם.',
+          ctaPrimary: 'נדבר על העסק שלך',
+          ctaSecondary: 'מה כבר בנינו',
+          methodTitle: 'לכל תחום יש עין משלו.',
+          methodIntro: 'אצלנו בכל תחום ליבה יש מומחה אנושי. הוא מכיר את העבודה מבפנים ומפעיל חדר סוכני AI משלו. אני מחבר את מה שהם רואים לתמונה של העסק כולו.',
+          method: [
+            ['המומחה מנסח את השאלה', 'הוא יודע מה לחפש בתחום שלו ומה צריך לבדוק לפני שמחליטים.'],
+            ['הסוכנים בודקים ומתעדים', 'כל צוות בודק את מה שהוגדר לו. יומן העבודה מסתנכרן איתי במרווחים קבועים, עם הממצאים והשאלות הפתוחות.'],
+            ['אני מחבר בין התחומים', 'כשקמפיין מביא פניות ואף אחת לא הופכת לשיחה, אני בודק מה קורה במעבר למכירות. לפעמים זה הדבר הראשון שצריך לתקן כדי להקדים את המתחרים.']
+          ],
+          pillarsTitle: 'תחומי העבודה',
           pillars: [
             {
               id: 'software',
@@ -433,7 +538,7 @@
           lead: 'מייסד הלר דיגיטל (הלר שירותים דיגיטליים בע״מ, ח.פ. 516277902). ירושלים.',
           storyTitle: 'הסיפור והגישה',
           story: [
-            'יוחנן דב בר הלר פועל בצומת שבין ארכיטקטורת מוצר, אוטומציה מבוססת AI ותשתיות שטח. במקום לרדוף אחרי טרנדים, המערכות נבנות מראש עבור השלב הבא של השוק — מסוכנים אוטונומיים שמבצעים פעולות באישור אנושי ועד מערכות סגורות ללא חיבור רשת.'
+            'אני דב הלר. אני אוהב לעבור עם הלקוח על הדרך שהלקוח שלו עובר, מהפעם הראשונה שהוא שומע עליו ועד למענה שהוא מקבל. לאורך הדרך אני נעזר במומחים מהתחומים השונים כדי להבין איפה נכון להתערב ומה כדאי לבנות.'
           ],
           focusTitle: 'מיקוד נוכחי',
           focus: 'ייצוא תוכנה, סוכני AI תפעוליים, סביבות סגורות ומערכות מסחר וטלמטריה — יחד עם שותפים טכנולוגיים ממוקדים.',
@@ -592,12 +697,20 @@
           decline: 'Decline'
         },
         home: {
-          eyebrow: 'DOV HELLER · PRODUCT & INFRASTRUCTURE ARCHITECT',
-          headline: 'Those who know, know.',
-          subhead: 'I’m Dov Heller, founder of HDIGITAL. I design and build software for Israeli and international markets, including CRM systems, AI agents, and infrastructure for sensitive data.',
-          ctaPrimary: 'View Proofs',
-          ctaSecondary: 'Direct Contact',
-          pillarsTitle: 'Core Architecture',
+          eyebrow: 'Dov Heller, founder of HDIGITAL',
+          headline: 'I know',
+          headlineEmphasis: 'where to look.',
+          subhead: 'Where does a customer get stuck? What happens to an inquiry once it comes in? Knowing how marketing, sales, and software work gives me a place to start.',
+          ctaPrimary: 'Tell me about your business',
+          ctaSecondary: 'See what we’ve built',
+          methodTitle: 'A specialist’s eye in every discipline.',
+          methodIntro: 'A human specialist leads each core discipline and runs a team of AI agents. I bring their findings together to understand what’s happening across the business.',
+          method: [
+            ['The specialist frames the question', 'They know what to look for in their discipline and what to check before making a decision.'],
+            ['The agents investigate and keep a log', 'Each team runs the checks it was given. A work log syncs with me at regular intervals, with findings and questions still open.'],
+            ['I connect the findings', 'When a campaign brings in leads and none become conversations, I look at the handoff to sales. Fixing that first can put you a step ahead.']
+          ],
+          pillarsTitle: 'What we work on',
           pillars: [
             {
               id: 'software',
@@ -630,7 +743,7 @@
           lead: 'Founder of Heller Digital Ltd. (Co. No. 516277902). Jerusalem.',
           storyTitle: 'Background & Trajectory',
           story: [
-            'Yochanan Dov Ber Heller operates at the intersection of product architecture, AI automation, and field-deployed systems. Rather than following industry cycles, systems are built ahead of the curve — from Hebrew-speaking AI agents with human-in-the-loop sign-off to air-gapped hardware specs.'
+            'I’m Dov Heller. I like to walk through the customer journey with the business owner, from the first time someone hears about the business to the response they receive. I work with specialists in each discipline to decide where to intervene and what to build.'
           ],
           focusTitle: 'Current Focus',
           focus: 'Software export, operational AI agents, closed systems, and D2C/telemetry platforms — alongside vetted engineering partners.',
@@ -869,26 +982,30 @@
       const activePillarObj = h.pillars.find(p => p.id === STATE.activePillar) || h.pillars[0];
       return `
         <section class="space-y-14">
-          <!-- Hero -->
-          <div class="max-w-3xl space-y-5 pt-2">
-            <p class="mono text-xs tracking-widest uppercase" style="color: var(--muted);">${h.eyebrow}</p>
-            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-tight" style="color: var(--navy);">${h.headline}</h1>
-            <p class="text-lg sm:text-xl leading-relaxed font-normal" style="color: var(--muted);">${h.subhead}</p>
-            <div class="flex flex-wrap items-center gap-3 pt-2">
-              <button type="button" data-go="proofs" class="px-5 py-2.5 rounded-md text-sm font-medium bg-navy text-white hover:opacity-90 transition-opacity">
-                ${h.ctaPrimary}
-              </button>
-              <button type="button" data-go="contact" class="px-5 py-2.5 rounded-md text-sm font-medium border hover:border-sky-400 transition-colors" style="border-color: var(--border); color: var(--ink);">
-                ${h.ctaSecondary}
-              </button>
+          <div class="home-opening">
+            <p class="home-byline">${h.eyebrow}</p>
+            <h1 class="home-headline">${h.headline}<br><em>${h.headlineEmphasis}</em></h1>
+            <p class="home-intro">${h.subhead}</p>
+            <div class="home-actions">
+              <a href="${pageUrl('contact', STATE.lang).search}" data-go="contact" class="home-contact">${h.ctaPrimary}</a>
+              <a href="${pageUrl('proofs', STATE.lang).search}" data-go="proofs" class="home-work">${h.ctaSecondary}</a>
             </div>
           </div>
+
+          <section class="home-method" aria-labelledby="home-method-title">
+            <div>
+              <h2 id="home-method-title">${h.methodTitle}</h2>
+              <p>${h.methodIntro}</p>
+            </div>
+            <ol class="home-method-list">
+              ${h.method.map(([title, text]) => `<li><h3>${title}</h3><p>${text}</p></li>`).join('')}
+            </ol>
+          </section>
 
           <!-- Engine Room / Interactive 3 Pillars -->
           <div class="space-y-5 pt-4 hairline-t">
             <div class="flex items-center justify-between">
-              <h2 class="text-xs mono uppercase tracking-widest" style="color: var(--muted);">${h.pillarsTitle}</h2>
-              <span class="mono text-xs" style="color: var(--muted);">01 — 03</span>
+              <h2 class="text-xl font-bold" style="color: var(--navy);">${h.pillarsTitle}</h2>
             </div>
             <div class="flex flex-wrap gap-2.5">
               ${h.pillars.map(p => `
@@ -1327,8 +1444,12 @@
           navigate(r);
         });
       });
-      document.querySelectorAll('[data-go]').forEach(btn => {
-        btn.addEventListener('click', () => navigate(btn.dataset.go));
+      document.querySelectorAll('[data-go]').forEach(link => {
+        link.addEventListener('click', event => {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          navigate(link.dataset.go);
+        });
       });
 
       // Capability tabs
