@@ -27,7 +27,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
 #main-content > section:not(.home-layout) h1{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-serif;font-weight:700;font-size:clamp(2.8rem,7vw,4.8rem);line-height:.95;letter-spacing:0;color:var(--navy)}
 #main-content > section:not(.home-layout) h2.text-xl,#main-content > section:not(.home-layout) h2.text-lg,#main-content > section:not(.home-layout) h3.text-lg{font-size:1.25rem}
 html[dir="rtl"] #main-content > section:not(.home-layout) p.mono.uppercase{display:none}
-#main-content > section:not(.home-layout) .surface-card{border-color:transparent;background:#fff;box-shadow:0 1px 2px rgba(26,46,70,.06),0 8px 24px rgba(26,46,70,.06)}
+body:not(.cyber-mode) #main-content > section:not(.home-layout) .surface-card{border-color:transparent;background:#fff;box-shadow:0 1px 2px rgba(26,46,70,.06),0 8px 24px rgba(26,46,70,.06)}
 body:not(.cyber-mode) #main-content > section:not(.home-layout) .surface-card:hover{border-color:var(--signal)}
 .proof-link{display:inline-block;margin-top:.25rem;font-size:.85rem;color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 /* Homepage section titles sized to match */
@@ -35,3 +35,9 @@ body:not(.cyber-mode) #main-content > section:not(.home-layout) .surface-card:ho
 
 /* World cards with a photo */
 .personal-editorial article.has-photo .world-photo{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:14px;margin-bottom:1rem;filter:saturate(.9)}
+
+/* Cyber page: keep dark cards readable */
+body.cyber-mode #main-content .surface-card{background:rgba(15,23,42,.72);border:1px solid rgba(56,189,248,.18);box-shadow:none}
+body.cyber-mode #main-content .surface-card:hover{border-color:rgba(56,189,248,.5)}
+body.cyber-mode #main-content .surface-card h3{color:#f1f5f9}
+body.cyber-mode #main-content .surface-card p{color:#cbd5e1}
