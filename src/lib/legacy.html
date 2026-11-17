@@ -199,6 +199,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
       font-size: 1.08rem;
       font-weight: 600;
     }
+    .home-kicker { margin: 0 0 .35rem; font-family: 'Karantina', 'IBM Plex Sans Hebrew', sans-serif; font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1; color: var(--signal); }
     .home-headline {
       margin-block: 0.24em 0.25em;
       font-size: clamp(3.4rem, 10vw, 7.4rem);
@@ -558,6 +559,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           <div class="home-hero">
           <div class="home-opening">
             <p class="home-byline">דב הלר, מייסד הלר דיגיטל</p>
+            <p class="home-kicker">מי שמכיר, מכיר.</p>
             <h2 class="home-headline">אני יודע<br><em>מה לחפש.</em></h2>
             <p class="home-intro">איפה הלקוח מתעכב? מה קורה לפנייה אחרי שהיא נכנסת? כשמכירים את העבודה בשיווק, במכירות ובתוכנה, יודעים גם איפה להסתכל קודם.</p>
             <div class="home-actions">
@@ -919,6 +921,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
         },
         home: {
           eyebrow: 'דב הלר, מייסד הלר דיגיטל',
+          kicker: 'מי שמכיר, מכיר.',
           headline: 'אני יודע',
           headlineEmphasis: 'מה לחפש.',
           subhead: 'איפה הלקוח מתעכב? מה קורה לפנייה אחרי שהיא נכנסת? כשמכירים את העבודה בשיווק, במכירות ובתוכנה, יודעים גם איפה להסתכל קודם.',
@@ -1124,6 +1127,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
         },
         home: {
           eyebrow: 'Dov Heller, founder of HDIGITAL',
+          kicker: 'Those who know, know.',
           headline: 'I know',
           headlineEmphasis: 'where to look.',
           subhead: 'Where does a customer get stuck? What happens to an inquiry once it comes in? Knowing how marketing, sales, and software work gives me a place to start.',
@@ -1565,6 +1569,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           <div class="home-hero">
           <div class="home-opening">
             <p class="home-byline">${h.eyebrow}</p>
+            <p class="home-kicker">${h.kicker}</p>
             <h2 class="home-headline">${h.headline}<br><em>${h.headlineEmphasis}</em></h2>
             <p class="home-intro">${h.subhead}</p>
             <div class="home-actions">
