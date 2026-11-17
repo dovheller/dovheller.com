@@ -262,6 +262,38 @@
     @media (min-width: 800px) {
       .home-method { grid-template-columns: 0.85fr 1fr; gap: clamp(30px, 6vw, 66px); }
     }
+    .cyber-kpis {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .cyber-kpi {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid var(--border);
+      border-block-start: 2px solid var(--signal);
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .cyber-kpi dt { order: 2; color: #f8fafc; font-size: 1.15rem; font-weight: 700; }
+    .cyber-kpi dd { display: contents; }
+    .cyber-stat { order: 1; color: #7dd3fc; font-size: clamp(2.1rem, 5vw, 3.1rem); line-height: 1; font-weight: 700; }
+    .cyber-kpi dd span { order: 3; color: #cbd5e1; }
+    .cyber-context { border-inline-start: 2px solid #38bdf8; padding: 5px 12px; color: #cbd5e1; }
+    .cyber-context h2, .cyber-context h3 { color: #f8fafc; font-size: 1.18rem; font-weight: 700; }
+    .cyber-source { color: #7dd3fc; text-decoration: underline; text-underline-offset: 3px; }
+    .cyber-scenario { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+    .cyber-scenario summary { color: #f8fafc; font-size: 1.2rem; font-weight: 700; padding: 12px 14px; cursor: pointer; }
+    .cyber-scenario dl { display: grid; gap: 10px; padding: 0 14px; }
+    .cyber-scenario dt { color: #7dd3fc; font-weight: 700; }
+    .cyber-scenario dd { color: #e2e8f0; }
+    .cyber-scenario p { padding: 10px 14px 14px; }
+    @media (max-width: 559px) {
+      .cyber-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cyber-kpi:first-child { grid-column: 1 / -1; }
+    }
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; animation: none !important; }
     }
@@ -382,40 +414,64 @@
   <script>
     const PUBLIC_SITE = 'https://dovheller.com/';
     const ROUTES = ['home', 'about', 'capabilities', 'cyber', 'proofs', 'approach', 'contact'];
-    const CYBER_TOOLS = {
+    const CYBER_DASHBOARD = {
       "he": {
-        "title": "כלים לעבודה",
-        "intro": "בדיקת קובץ, הכנה לתרגיל שחזור ותיעוד שרשרת משמורת.",
-        "hashTitle": "טביעת קובץ SHA‑256",
-        "hashText": "בחרו קובץ עד 20MB וקבלו טביעה להשוואה. החישוב מתבצע בדפדפן והקובץ נשאר אצלכם.",
-        "file": "בחרו קובץ",
-        "working": "מחשב טביעת קובץ…",
-        "tooBig": "הקובץ גדול מהמגבלה של 20MB.",
-        "hashError": "לא ניתן לחשב טביעה בדפדפן הזה.",
-        "hashReady": "טביעת הקובץ מוכנה.",
-        "planTitle": "הכנה לתרגיל שחזור",
-        "planText": "סמנו את מה שכבר נקבע לצורך התרגיל.",
-        "checks": [
-          "נבחר עותק גיבוי לבדיקה",
-          "הוגדרו אחראי וסביבת שחזור",
-          "הוגדר איך מוודאים שהמידע שוחזר"
-        ],
-        "count": "סומנו {n} מתוך 3",
-        "flowTitle": "תיעוד שרשרת משמורת",
-        "steps": [
+        "title": "תמונת מצב הסייבר בישראל",
+        "intro": "מה מדווח בישראל, מה עלול לקרות בעסק שלכם ואיפה מתחילים להתגונן.",
+        "period": "ישראל · סיכום שנת 2025",
+        "metrics": [
           [
-            "קליטה",
-            "מתעדים את מזהה הפריט, מקורו, מועד הקליטה והאחראי."
+            "26,498",
+            "דיווחים למוקד 119",
+            "עלייה של כ־55% לעומת 2024"
           ],
           [
-            "אימות",
-            "מתעדים חישוב SHA‑256 במועדים שנקבעו ומשווים לערך הייחוס."
+            "3,404",
+            "דיווחי דיוג והונאה",
+            "הודעות ואתרים מתחזים וניסיונות הונאה"
           ],
           [
-            "מסירה",
-            "מתעדים למי הועבר הפריט, מתי, ומה כלל החומר שנמסר."
+            "2,331",
+            "דיווחי חדירה למערכות מחשוב",
+            "קטגוריית סיווג בדוח השנתי"
           ]
         ],
+        "note": "אלה דיווחים שהתקבלו במוקד. דיווח אחד יכול להיכלל בכמה קטגוריות.",
+        "annualSource": "הדוח השנתי של מערך הסייבר הלאומי",
+        "updateTitle": "עדכון מישראל · נובמבר 2026",
+        "update": "מתחילת 2026 ועד העדכון התקבלו יותר מ־26,000 דיווחים על חשדות למתקפות, ובהם יותר מ־5,000 אירועי סייבר במערכות של ארגונים.",
+        "updateSource": "הודעת מערך הסייבר הלאומי",
+        "scenarioTitle": "שלושה תרחישים לעסק",
+        "risk": "מה בסיכון",
+        "response": "מה אפשר לעשות",
+        "scenarios": [
+          [
+            "ספק מבקש לשנות פרטי תשלום",
+            "תשלום על חשבונית אמיתית עלול להגיע לחשבון של מתחזה.",
+            "לפני ההעברה, מתקשרים לספק למספר שכבר שמור אצלכם ומוודאים מולו את השינוי.",
+            "הנחיית ה־FBI לעסקים",
+            "bec"
+          ],
+          [
+            "כופרה נועלת קבצים",
+            "מערכות העבודה עלולות להיעצר. גם גיבוי שהמערכת הנגועה יכולה להגיע אליו עלול להיפגע.",
+            "שומרים עותק גיבוי נפרד ומתרגלים שחזור של מערכת חיונית לפני שצריכים אותו.",
+            "הנחיית מערך הסייבר הלאומי",
+            "backup"
+          ],
+          [
+            "הודעת כניסה מזויפת מגיעה לעובד",
+            "התוקף עלול להשיג גישה לדוא״ל, למסמכים ולחשבונות המחוברים אליו.",
+            "נכנסים לשירות דרך הכתובת המוכרת. מפעילים אימות רב־שלבי בחשבונות עסקיים.",
+            "מדריך מערך הסייבר הלאומי",
+            "phishing"
+          ]
+        ],
+        "worldTitle": "בהקשר עולמי · כופרה",
+        "world": "מפרצות המידע במדגם של דוח Verizon לשנת 2026 כללו שימוש בכופרה.",
+        "worldSource": "Verizon DBIR 2026",
+        "report": "דיווח על אירוע סייבר בישראל",
+        "capabilities": "איך הלר דיגיטל יכולה לעזור",
         "share": "שיתוף בוואטסאפ",
         "copy": "העתקת קישור",
         "copied": "הקישור הועתק",
@@ -423,44 +479,77 @@
         "shareUrl": "כתובת לשיתוף"
       },
       "en": {
-        "title": "Practical tools",
-        "intro": "Check a file, prepare a recovery exercise, and document chain of custody.",
-        "hashTitle": "SHA‑256 file fingerprint",
-        "hashText": "Choose a file up to 20 MB to calculate a fingerprint for comparison. The browser processes it locally.",
-        "file": "Choose a file",
-        "working": "Calculating fingerprint…",
-        "tooBig": "The file exceeds the 20 MB limit.",
-        "hashError": "This browser could not calculate the fingerprint.",
-        "hashReady": "File fingerprint ready.",
-        "planTitle": "Recovery exercise checklist",
-        "planText": "Mark each item you have set up for the exercise.",
-        "checks": [
-          "Select a backup to test",
-          "Assign an owner and pick a recovery environment",
-          "Define how to verify the recovered data"
-        ],
-        "count": "{n} of 3 checked",
-        "flowTitle": "Chain-of-custody documentation",
-        "steps": [
+        "title": "Cyber risk in Israel",
+        "intro": "What gets reported in Israel, what could happen to your business, and where to start.",
+        "period": "Israel · 2025 full year",
+        "metrics": [
           [
-            "Intake",
-            "Record the item ID, source, intake time, and person responsible."
+            "26,498",
+            "Reports to the 119 hotline",
+            "About 55% more than in 2024"
           ],
           [
-            "Verification",
-            "Record SHA‑256 at each designated point and compare it with the reference value."
+            "3,404",
+            "Phishing and fraud reports",
+            "Impersonation and attempted fraud"
           ],
           [
-            "Handover",
-            "Record who received the item, when, and what the handover included."
+            "2,331",
+            "Computer intrusion reports",
+            "Category from the annual report"
           ]
         ],
+        "note": "These are reports received by the hotline. One report may appear in more than one category.",
+        "annualSource": "Israel National Cyber Directorate annual report",
+        "updateTitle": "Israel update · November 2026",
+        "update": "From the start of 2026 to this update, the Directorate received more than 26,000 reports of suspected cyberattacks, including more than 5,000 cyber incidents in organizational systems.",
+        "updateSource": "Israel National Cyber Directorate announcement",
+        "scenarioTitle": "Three scenarios for your business",
+        "risk": "What’s at risk",
+        "response": "What you can do",
+        "scenarios": [
+          [
+            "A vendor asks you to change payment details",
+            "A payment for a real invoice could go to an impersonator’s account.",
+            "Before transferring money, verify the change by calling your vendor at a number already on file.",
+            "FBI guidance for businesses",
+            "bec"
+          ],
+          [
+            "Ransomware locks your files",
+            "Operations can stop. A backup that the compromised system can reach may also be affected.",
+            "Keep a separate backup and practice restoring a critical system before you need it.",
+            "Israel National Cyber Directorate guidance",
+            "backup"
+          ],
+          [
+            "An employee receives a fake sign-in message",
+            "An attacker could gain access to email, files, and connected accounts.",
+            "Open the service directly using its known address. Enable multifactor authentication on business accounts.",
+            "Israel National Cyber Directorate guide",
+            "phishing"
+          ]
+        ],
+        "worldTitle": "Global context · ransomware",
+        "world": "of data breaches in Verizon’s 2026 dataset involved ransomware.",
+        "worldSource": "Verizon DBIR 2026",
+        "report": "Report a cyber incident in Israel",
+        "capabilities": "How HDIGITAL can help",
         "share": "Share on WhatsApp",
         "copy": "Copy link",
         "copied": "Link copied",
         "copyHint": "Link selected for manual copying",
         "shareUrl": "Share link"
       }
+    };
+    const CYBER_SOURCES = {
+      "annual": "https://www.gov.il/BlobFolder/news/2025report/he/summary2025.pdf",
+      "update": "https://www.gov.il/he/pages/portal041126",
+      "world": "https://www.verizon.com/business/resources/T88f/reports/2026-dbir-data-breach-investigations-report.pdf#page=11",
+      "report": "https://www.gov.il/he/service/cyber-event-report",
+      "bec": "https://www.fbi.gov/how-we-can-help-you/common-frauds-and-scams/business-email-compromise",
+      "backup": "https://www.gov.il/he/pages/prepare_for_ransomeware?chapterIndex=1",
+      "phishing": "https://www.gov.il/BlobFolder/generalpage/instructiontools/he/%D7%97%D7%95%D7%91%D7%A8%D7%AA.pdf"
     };
 
     const STATE = {
@@ -887,9 +976,6 @@
 
     const CYBER_DATA = {
       en: {
-        badge: 'COMPARTMENTALIZED BRIEFING // EN',
-        title: 'Cyber, Closed Systems & Field Operations',
-        lead: 'Privacy engineering, closed systems, and data integrity.',
         pillars: [
           {
             code: 'SYS-01',
@@ -916,9 +1002,6 @@
         partnersBody: 'Vetted Israeli defense-tech and forensic engineering partners operating under strict NDA and compartmentalized protocols. Introductions are handled privately.',
       },
       he: {
-        badge: 'תדריך ממודר // HE',
-        title: 'סייבר, מערכות סגורות ופעילות בינלאומית',
-        lead: 'הנדסת פרטיות, מערכות סגורות ואימות שלמות מידע.',
         pillars: [
           {
             code: 'SYS-01',
@@ -1137,84 +1220,59 @@
       if (path !== location.pathname + location.search) history.pushState(null, '', path);
     }
 
-    function renderCyberTools() {
-      const w = CYBER_TOOLS[STATE.lang];
+    function renderCyberDashboard() {
+      const w = CYBER_DASHBOARD[STATE.lang];
       const url = pageUrl('cyber', STATE.lang).href;
+      const sourceLink = (source, label) => `<a class="cyber-source" href="${CYBER_SOURCES[source]}">${label}</a>`;
       return `
-        <section aria-labelledby="cyber-tools-heading" class="space-y-5 pt-2">
-          <div class="space-y-1">
-            <h2 id="cyber-tools-heading" class="text-2xl font-bold text-white">${w.title}</h2>
-            <p class="text-slate-300">${w.intro}</p>
-          </div>
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div class="surface-card min-w-0 rounded-xl p-5 space-y-3">
-              <h3 class="text-lg font-bold text-white">${w.hashTitle}</h3>
-              <p id="cyber-hash-help" class="text-sm text-slate-300">${w.hashText}</p>
-              <label for="cyber-hash-file" class="block text-sm font-medium text-sky-300">${w.file}</label>
-              <input id="cyber-hash-file" aria-describedby="cyber-hash-help" type="file" class="block w-full rounded-md border border-slate-600 bg-slate-950 p-2 text-sm text-slate-200">
-              <p id="cyber-hash-status" class="text-sm text-slate-300" role="status"></p>
-              <output hidden id="cyber-hash-output" for="cyber-hash-file" dir="ltr" class="mono block break-all rounded-md bg-slate-950 p-3 text-sm text-sky-300"></output>
-            </div>
-            <fieldset class="surface-card min-w-0 rounded-xl p-5 space-y-3" aria-labelledby="cyber-plan-heading">
-              <h3 id="cyber-plan-heading" class="text-lg font-bold text-white">${w.planTitle}</h3>
-              <p class="text-sm text-slate-300">${w.planText}</p>
-              <div class="space-y-2">
-                ${w.checks.map(text => `<label class="flex items-start gap-2 text-sm text-slate-200"><input data-cyber-check type="checkbox" class="mt-1 accent-sky-400"><span>${text}</span></label>`).join('')}
+        <section class="space-y-5" aria-labelledby="cyber-kpis-title">
+          <h2 id="cyber-kpis-title" class="text-xl font-bold text-white">${w.period}</h2>
+          <dl class="cyber-kpis">
+            ${w.metrics.map(([value, label, detail]) => `
+              <div class="cyber-kpi">
+                <dt>${label}</dt>
+                <dd><bdi class="cyber-stat">${value}</bdi><span>${detail}</span></dd>
               </div>
-              <p id="cyber-plan-count" class="text-sm text-sky-300" role="status">${w.count.replace('{n}', '0')}</p>
-            </fieldset>
-            <div class="surface-card rounded-xl p-5 space-y-3 md:col-span-2">
-              <h3 class="text-lg font-bold text-white">${w.flowTitle}</h3>
-              <div class="grid gap-3 md:grid-cols-3">
-                ${w.steps.map(([title, text]) => `<details class="rounded-lg border border-slate-700 p-3"><summary class="cursor-pointer font-medium text-sky-300">${title}</summary><p class="mt-2 text-sm text-slate-200">${text}</p></details>`).join('')}
-              </div>
-            </div>
+            `).join('')}
+          </dl>
+          <p class="text-sm text-slate-300">${w.note} ${sourceLink('annual', w.annualSource)}</p>
+          <div class="cyber-context">
+            <h3>${w.updateTitle}</h3>
+            <p>${w.update} ${sourceLink('update', w.updateSource)}</p>
           </div>
+        </section>
+
+        <section class="space-y-4" aria-labelledby="cyber-scenarios-title">
+          <h2 id="cyber-scenarios-title" class="text-2xl font-bold text-white">${w.scenarioTitle}</h2>
+          ${w.scenarios.map(([title, risk, response, sourceLabel, source], index) => `
+            <details class="cyber-scenario" ${index === 0 ? 'open' : ''}>
+              <summary>${title}</summary>
+              <dl>
+                <div><dt>${w.risk}</dt><dd>${risk}</dd></div>
+                <div><dt>${w.response}</dt><dd>${response}</dd></div>
+              </dl>
+              <p>${sourceLink(source, sourceLabel)}</p>
+            </details>
+          `).join('')}
+          <a class="cyber-source" href="${CYBER_SOURCES.report}">${w.report}</a>
+        </section>
+
+        <aside class="cyber-context" aria-labelledby="cyber-world-title">
+          <h2 id="cyber-world-title">${w.worldTitle}</h2>
+          <p><bdi class="font-bold text-sky-300">48%</bdi> ${w.world} ${sourceLink('world', w.worldSource)}</p>
+        </aside>
+
           <div class="flex flex-wrap items-center gap-3">
             <a href="https://wa.me/?text=${encodeURIComponent(url)}" target="_blank" rel="noopener noreferrer" class="rounded-md bg-sky-300 px-4 py-2 text-sm font-bold text-slate-950">${w.share}</a>
             <button id="cyber-copy-link" type="button" class="rounded-md border border-slate-500 px-4 py-2 text-sm font-medium text-white">${w.copy}</button>
             <span id="cyber-copy-status" role="status" class="text-sm text-sky-300"></span>
           </div>
           <input hidden id="cyber-share-url" aria-label="${w.shareUrl}" readonly dir="ltr" value="${url.replaceAll('&', '&amp;')}" class="min-w-0 w-full rounded-md border border-slate-600 bg-slate-950 p-2 text-sm text-slate-200">
-        </section>
       `;
     }
 
-    function bindCyberTools() {
-      const w = CYBER_TOOLS[STATE.lang];
-      const fileField = document.getElementById('cyber-hash-file');
-      const output = document.getElementById('cyber-hash-output');
-      const status = document.getElementById('cyber-hash-status');
-      let selection = 0;
-      fileField.addEventListener('change', async () => {
-        const current = ++selection;
-        const file = fileField.files[0];
-        output.hidden = true;
-        output.textContent = '';
-        status.textContent = '';
-        if (!file) return;
-        if (file.size > 20_000_000) {
-          status.textContent = w.tooBig;
-          return;
-        }
-        status.textContent = w.working;
-        try {
-          const digest = await crypto.subtle.digest('SHA-256', await file.arrayBuffer());
-          if (current !== selection || !fileField.isConnected) return;
-          output.textContent = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, '0')).join('');
-          output.hidden = false;
-          status.textContent = w.hashReady;
-        } catch {
-          if (current === selection) status.textContent = w.hashError;
-        }
-      });
-
-      const checks = Array.from(document.querySelectorAll('[data-cyber-check]'));
-      const count = document.getElementById('cyber-plan-count');
-      checks.forEach(check => check.addEventListener('change', () => {
-        count.textContent = w.count.replace('{n}', checks.filter(item => item.checked).length);
-      }));
-
+    function bindCyberShare() {
+      const w = CYBER_DASHBOARD[STATE.lang];
       const shareUrl = document.getElementById('cyber-share-url');
       const copyStatus = document.getElementById('cyber-copy-status');
       document.getElementById('cyber-copy-link').addEventListener('click', async () => {
@@ -1231,21 +1289,18 @@
     }
 
     function renderCyber() {
+      const w = CYBER_DASHBOARD[STATE.lang];
       const cd = CYBER_DATA[STATE.lang];
       return `
         <section class="space-y-8">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center gap-2.5">
-              <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-              <span class="mono text-xs tracking-widest text-sky-400">${cd.badge}</span>
-            </div>
-          </div>
-
           <div class="space-y-3 max-w-3xl">
-            <h1 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">${cd.title}</h1>
-            <p class="text-base sm:text-lg text-slate-300 leading-relaxed">${cd.lead}</p>
+            <h1 class="text-3xl sm:text-5xl font-bold text-white tracking-tight">${w.title}</h1>
+            <p class="text-base sm:text-xl text-slate-300 leading-relaxed">${w.intro}</p>
           </div>
 
+          ${renderCyberDashboard()}
+
+          <h2 class="text-2xl font-bold text-white">${w.capabilities}</h2>
           <!-- 4 Cyber Systems -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             ${cd.pillars.map(p => `
@@ -1256,8 +1311,6 @@
               </div>
             `).join('')}
           </div>
-
-          ${renderCyberTools()}
 
           <div class="surface-card rounded-xl p-6 space-y-2 max-w-3xl">
             <h3 class="mono text-xs uppercase tracking-widest text-slate-400">${cd.partnersTitle}</h3>
@@ -1427,7 +1480,7 @@
     }
 
     function bindViewEvents(d) {
-      if (STATE.route === 'cyber') bindCyberTools();
+      if (STATE.route === 'cyber') bindCyberShare();
 
       // Pillars on home
       document.querySelectorAll('[data-pillar]').forEach(btn => {
