@@ -32,3 +32,6 @@ body:not(.cyber-mode) #main-content > section:not(.home-layout) .surface-card:ho
 .proof-link{display:inline-block;margin-top:.25rem;font-size:.85rem;color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 /* Homepage section titles sized to match */
 .home-layout h2.text-xl,.home-layout h2.text-lg{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;color:var(--navy)}
+
+/* World cards with a photo */
+.personal-editorial article.has-photo .world-photo{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:14px;margin-bottom:1rem;filter:saturate(.9)}

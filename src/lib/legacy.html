@@ -552,7 +552,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           <section id="personal-worlds" class="personal-editorial" data-home-reveal aria-labelledby="personal-worlds-title">
             <h2 id="personal-worlds-title">מה אני שומע כשמישהו בא עם רעיון</h2>
             <div class="personal-grid">
-              <article><h3>ירושלים</h3><p>בירושלים גדלתי בין קהילות ולמדתי כמה חשוב להבין למי מדברים. אותה מילה יכולה לפתוח שיחה במקום אחד ולסגור אותה במקום אחר.</p></article><article><h3>מוזיקה</h3><p>בחזנות, שם קוראים לי דובל׳ה, למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא.</p></article><article><h3>יזמות וטכנולוגיה</h3><p>כשבעל עסק מספר לי מה הוא רוצה לבנות, אני מקשיב גם לאיך שהעבודה באמת מתנהלת. שם אני מגלה לא פעם מה שווה לבנות קודם.</p></article>
+              <article><h3>ירושלים</h3><p>בירושלים גדלתי בין קהילות ולמדתי כמה חשוב להבין למי מדברים. אותה מילה יכולה לפתוח שיחה במקום אחד ולסגור אותה במקום אחר.</p></article><article class="has-photo"><img class="world-photo" src="/assets/dov-music-stage.webp" alt="דוב הלר שר על הבמה" width="900" height="1200" loading="lazy" decoding="async"><h3>מוזיקה</h3><p>בחזנות, שם קוראים לי דובל׳ה, למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא.</p></article><article><h3>יזמות וטכנולוגיה</h3><p>כשבעל עסק מספר לי מה הוא רוצה לבנות, אני מקשיב גם לאיך שהעבודה באמת מתנהלת. שם אני מגלה לא פעם מה שווה לבנות קודם.</p></article>
             </div>
           </section>
 
@@ -1573,7 +1573,8 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           ],
           [
             "מוזיקה",
-            "בחזנות, שם קוראים לי דובל׳ה, למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא."
+            "בחזנות, שם קוראים לי דובל׳ה, למדתי להקשיב גם בין המשפטים. לפעמים רגע של שקט מספר לך יותר מהצליל הבא.",
+            "/assets/dov-music-stage.webp"
           ],
           [
             "יזמות וטכנולוגיה",
@@ -1647,7 +1648,7 @@ h1,h2,.display{font-family:'Karantina','IBM Plex Sans Hebrew',system-ui,sans-ser
           <section id="personal-worlds" class="personal-editorial" data-home-reveal aria-labelledby="personal-worlds-title">
             <h2 id="personal-worlds-title">${personal.worldTitle}</h2>
             <div class="personal-grid">
-              ${personal.worlds.map(([title, story]) => `<article><h3>${title}</h3><p>${story}</p></article>`).join('')}
+              ${personal.worlds.map(([title, story, img]) => `<article${img ? ' class="has-photo"' : ''}>${img ? `<img class="world-photo" src="${img}" alt="${personal.name} שר על הבמה" width="900" height="1200" loading="lazy" decoding="async">` : ''}<h3>${title}</h3><p>${story}</p></article>`).join('')}
             </div>
           </section>
 
