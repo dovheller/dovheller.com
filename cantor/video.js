@@ -1,0 +1,1 @@
+document.querySelectorAll('.video').forEach(b=>b.addEventListener('click',()=>{b.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${b.dataset.id}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen title="${b.dataset.t||''}"></iframe>`},{once:true}));
