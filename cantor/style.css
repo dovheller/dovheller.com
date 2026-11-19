@@ -37,3 +37,4 @@ footer{border-top:1px solid var(--line);padding:2rem 1.2rem;text-align:center;co
 .card.has-img img{border-radius:10px;margin:-.4rem 0 .8rem;aspect-ratio:3/2;object-fit:cover;width:100%}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
 .gallery img{border-radius:12px;aspect-ratio:3/4;object-fit:cover;object-position:center 25%;width:100%}
+.hero img.hero-img{aspect-ratio:4/5;object-position:center 20%;max-height:640px;width:100%}
