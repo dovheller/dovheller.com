@@ -31,3 +31,6 @@ blockquote{margin:1.5rem 0;padding:1rem 1.4rem;border-inline-start:3px solid var
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 footer{border-top:1px solid var(--line);padding:2rem 1.2rem;text-align:center;color:var(--muted);font-size:.9rem}
 @media(min-width:760px){.hero,.two{grid-template-columns:1.1fr 1fr}.cards{grid-template-columns:repeat(2,1fr)}.videos{grid-template-columns:repeat(2,1fr)}}
+.vfig{margin:0}.vfig figcaption{font-size:.92rem;color:var(--muted);margin-top:.4rem}.vfig figcaption b{color:var(--ink);font-weight:600}
+#voice blockquote{font-size:1.05rem}
+@media(min-width:760px){.cards{grid-template-columns:repeat(2,1fr)}}
