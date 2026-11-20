@@ -56,3 +56,8 @@ footer{border-top:1px solid var(--line);padding:2rem 1.2rem;text-align:center;co
  .card{padding:1.1rem}
  .lead{font-size:1.05rem}
 }
+.posters{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem}
+.poster{margin:0}.poster img{border-radius:8px;width:100%;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.poster figcaption{font-size:.82rem;color:var(--muted);margin-top:.45rem;line-height:1.45}.poster figcaption b{color:var(--ink);font-weight:600}
+.poster .when{color:var(--gold)}
+@media(min-width:760px){.posters{grid-template-columns:repeat(4,1fr)}}
