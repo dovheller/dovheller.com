@@ -61,3 +61,11 @@ footer{border-top:1px solid var(--line);padding:2rem 1.2rem;text-align:center;co
 .poster figcaption{font-size:.82rem;color:var(--muted);margin-top:.45rem;line-height:1.45}.poster figcaption b{color:var(--ink);font-weight:600}
 .poster .when{color:var(--gold)}
 @media(min-width:760px){.posters{grid-template-columns:repeat(4,1fr)}}
+.chapters{display:grid;gap:1rem;position:relative}
+.ch{position:relative;border:1px solid var(--line);border-radius:16px;padding:1.4rem 1.4rem 1.4rem 1.4rem;background:linear-gradient(160deg,rgba(201,164,92,.06),transparent 60%)}
+.ch .num{font:700 3.2rem/1 K;color:var(--gold);opacity:.55;position:absolute;inset-inline-end:1rem;top:.6rem}
+.ch h3{font:700 2rem/1.05 K;margin:0 0 .5rem;color:var(--ink)}
+.ch p{margin:0;color:#d6ccbb}
+.ch.now{border-color:var(--gold);background:linear-gradient(160deg,rgba(201,164,92,.16),transparent 70%)}
+.ch.now .num{opacity:1}
+@media(min-width:760px){.chapters{grid-template-columns:repeat(3,1fr)}}
